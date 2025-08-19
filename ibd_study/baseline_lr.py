@@ -5,6 +5,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
 from hyperopt import space_eval, STATUS_OK, Trials, fmin, tpe, hp
+import datetime
+import os
+from logger import logging
 
 # Load and prepare data
 data_df = pd.read_csv("data/transformed_df.csv")
@@ -94,3 +97,11 @@ cm = metrics.confusion_matrix(y_test, y_pred_test, labels=class_labels)
 df_cm = pd.DataFrame(cm, index=class_labels, columns=class_labels)
 print("\nConfusion Matrix:")
 print(df_cm)
+log_message = (
+    f"Model Run Results - {current_date}\n"
+    f"  File: {file_name}\n"
+    f"  Accuracy: {accuracy_score:.2f}\n"
+    f"  Confusion Matrix: {df_cm}\n"
+    f"--------------------------------------------------"
+)
+logging.info(log_message)

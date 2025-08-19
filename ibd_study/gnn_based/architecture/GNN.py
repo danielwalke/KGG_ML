@@ -18,7 +18,7 @@ class OntologyScatter:
         return aggreg_feature_view
 
 class GNN(torch.nn.Module):
-    def __init__(self, ontology_list:OntologyList, num_classes, dropout=0.0):
+    def __init__(self, ontology_list:OntologyList, num_classes, dropout=0.0, protein_embeddings = None):
         super(GNN, self).__init__()
         self.module_list = []
         self.ontology_list = ontology_list
@@ -50,7 +50,7 @@ class GNN(torch.nn.Module):
 
     def forward(self, data):
         ontology = self.ontology_list[0]
-        for ontology_layer in ontology.ontology_layers:
+        for i, ontology_layer in enumerate(ontology.ontology_layers):
             transformed_features =  data * self.ontology_layer_params_dict[ontology_layer.ontology_layer_name] ## Hadamard Product to make it trainable
             aggreg_feature_view = self.scatter_fun_dict[ontology_layer.ontology_layer_name](transformed_features) ## Aggregation for knowledge-driven feature reduction
             #aggreg_feature_view = self.ontology_layer_scaler_dict[ontology_layer.ontology_layer_name](aggreg_feature_view) ## Scaling since network is imbalanced and we sum

@@ -5,6 +5,10 @@ from sklearn import metrics
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import cross_val_score, StratifiedKFold
 from hyperopt import space_eval, STATUS_OK, Trials, fmin, tpe, hp
+import datetime
+import os
+from logger import logging
+
 data_df = pd.read_csv("data/transformed_df.csv")
 sample_names = data_df.pop("index")
 y = data_df.pop("condition")
@@ -74,5 +78,14 @@ print(accuracy_score)
 class_labels = np.unique(y)
 cm = metrics.confusion_matrix(y_test, y_pred_test, labels=class_labels)
 df_cm = pd.DataFrame(cm, index=class_labels, columns=class_labels)
+
 print(df_cm)
+log_message = (
+    f"Model Run Results - {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+    f"  File: {os.path.basename(__file__)}\n"
+    f"  Accuracy: {accuracy_score:.2f}\n"
+    f"  Confusion Matrix: {df_cm}\n"
+    f"--------------------------------------------------"
+)
+logging.info(log_message)
 
