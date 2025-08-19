@@ -26,13 +26,13 @@ tax_edges = pd.read_csv("../data/tax_edges.csv")
 species_edge_index = torch.from_numpy(tax_edges.loc[:, ["index", "species"]].values.transpose()).type(torch.long).to(device)
 genus_edge_index = torch.from_numpy(tax_edges.loc[:, ["species", "genus"]].values.transpose()).type(torch.long).to(device)
 X = data_df.values
-print(X.shape)
+
 ontology_layer = OntologyLayer("protein", "species", data_df.values.shape[-1], species_edge_index)
 ontology_layer_genus = OntologyLayer("species", "genus", species_edge_index[-1].max()+1, genus_edge_index)
 
 tax_ontology = Ontology("Taxonomy")
 tax_ontology.add_layer(ontology_layer)
-tax_ontology.add_layer(ontology_layer_genus)
+#tax_ontology.add_layer(ontology_layer_genus)
 ##Average Accuracy: 0.6333 ± 0.0425 -> no early stopping tested or scaling of initial features ## TODO
 ontology_list = [tax_ontology]
 
@@ -54,7 +54,7 @@ space = {
     'C': hp.loguniform('C', np.log(0.001), np.log(100)),
     'lr': hp.loguniform('lr', np.log(1e-3), np.log(1e-1)),
     'dropout': hp.loguniform('dropout', np.log(1e-2), np.log(5e-1)),
-
+    "hidden_dim": hp.quniform("hidden_dim", 2, 64, q=2)
 }
 
 def get_best_params(X_train, y_train):
@@ -93,16 +93,18 @@ def get_best_params(X_train, y_train):
     return final_best_params
 
 best_params = get_best_params(X_train, y_train)
+print(best_params)
 # best_params = {
 #     "C": 10,
 #     "lr": 1e-2,
 #     "dropout": 0.0,
+#     "hidden_dim": 8
 # }
 
 acc_scores = []
 for i in tqdm(range(10)):
     set_all_seeds(i)
-    model = GNNModel(ontology_list, num_classes, best_params["lr"], best_params["C"], 500, best_params["dropout"], device=device)
+    model = GNNModel(ontology_list, num_classes, best_params["lr"], best_params["C"], 500, best_params["dropout"], device=device, hidden_dim = best_params["hidden_dim"])
     model.fit(X_train, y_train)
     y_pred_test = model.predict(X_test)
     acc_scores.append(metrics.accuracy_score(y_test.cpu().numpy(), y_pred_test))
