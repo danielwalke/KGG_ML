@@ -9,14 +9,15 @@ from sklearn import metrics
 
 
 class GNNModel:
-    def __init__(self, ontology_list, num_classes, lr, C, max_epochs, dropout, device, hidden_dim = 1, protein_embeddings= None):
+    def __init__(self, ontology_list, num_classes, lr, C, max_epochs, dropout, device, hidden_dim = 1, num_layers = None, protein_embeddings= None):
         self.device = device
         self.model_params = {
             "ontology_list": ontology_list,
             "num_classes": num_classes,
             "dropout": dropout,
             "protein_embeddings": protein_embeddings,
-            "hidden_dim":  int(hidden_dim)
+            "hidden_dim":  int(hidden_dim),
+            "num_layers": int(num_layers)
         }
         self.model = GNN(**self.model_params).to(device)
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=lr)

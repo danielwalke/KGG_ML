@@ -4,6 +4,9 @@ from sklearn.model_selection import StratifiedKFold, cross_val_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import metrics
 from hyperopt import fmin, tpe, hp, STATUS_OK, Trials, space_eval
+import datetime
+import os
+from logger import logging
 
 NESTED_CV = (10, 5)
 # Load and prepare the data
@@ -108,7 +111,13 @@ for fold_idx, (train_index, test_index) in enumerate(outer_cv.split(X, y), 1):
     accuracy = metrics.accuracy_score(y_test, y_pred_test)
     fold_accuracies.append(accuracy)
     print(f"Accuracy on test set for fold {fold_idx}: {accuracy:.4f}")
-
+    log_message = (
+        f"Model Run Results - {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+        f"  File: {os.path.basename(__file__)} (Fold: {fold_idx} / {NESTED_CV[0]})\n"
+        f"  Accuracy: {accuracy:.4f}\n"
+        f"--------------------------------------------------"
+    )
+    logging.info(log_message)
     # Calculate and aggregate confusion matrix
     cm = metrics.confusion_matrix(y_test, y_pred_test, labels=class_labels)
     if total_cm is None:
@@ -126,3 +135,12 @@ print(f"\nAverage Accuracy: {mean_accuracy:.4f} ± {std_accuracy:.4f}")
 print("\nAggregated Confusion Matrix across all folds:")
 df_cm = pd.DataFrame(total_cm, index=class_labels, columns=class_labels)
 print(df_cm)
+
+log_message = (
+    f"Model Run Results - {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+    f"  File: {os.path.basename(__file__)}\n"
+    f"  Accuracy: {mean_accuracy:.4f}± {std_accuracy:.4f}\n"
+    f"  Confusion Matrix: {df_cm}\n"
+    f"--------------------------------------------------"
+)
+logging.info(log_message)
