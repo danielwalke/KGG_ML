@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import cross_val_score, KFold
-from sklearn.preprocessing import StandardScaler, MaxAbsScaler
+from sklearn.preprocessing import StandardScaler
 from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
 from hyperopt import space_eval, STATUS_OK, Trials, fmin, tpe, hp
@@ -13,7 +13,21 @@ NESTED_CV = (10, 5)
 data_df = pd.read_csv("data/transformed_df.csv")
 sample_names = data_df.pop("index")
 y = data_df.pop("condition")
-X = data_df.values
+proteins_over_samples_df = data_df.transpose().reset_index()
+proteins_over_samples_df["index"] = proteins_over_samples_df["index"].astype(np.int64)
+
+ko_edges = pd.read_csv("data/function_edges.csv")
+go_edges = pd.read_csv("data/function_edges_go.csv")
+ko_edges["index"] = ko_edges["index"].astype(np.int64)
+go_edges["index"] = go_edges["index"].astype(np.int64)
+
+merged_proteins_over_sampled_df_ko = pd.merge(ko_edges, proteins_over_samples_df, on="index")
+merged_proteins_over_sampled_df_go = pd.merge(go_edges, proteins_over_samples_df, on="index")
+ko_level_features = merged_proteins_over_sampled_df_ko.groupby("trg").apply(np.sum, include_groups=False, axis = 0).transpose().iloc[1:].values
+go_level_features = merged_proteins_over_sampled_df_go.groupby("trg").apply(np.sum, include_groups=False, axis = 0).transpose().iloc[1:].values
+print(ko_level_features.shape)
+print(go_level_features.shape)
+X = np.hstack((ko_level_features, go_level_features))
 
 print("Class distribution in the full dataset:")
 print(np.unique(y, return_counts=True))
@@ -23,7 +37,7 @@ space = {
     'penalty': hp.choice('penalty', ['l1', 'l2', 'elasticnet']),
     'l1_ratio': hp.uniform('l1_ratio', 0.0, 1.0),
     'class_weight': hp.choice('class_weight', [None, 'balanced']),
-    'solver': 'saga',
+    'solver': 'saga'
 }
 
 
@@ -72,7 +86,7 @@ for fold_idx, (train_index, test_index) in enumerate(outer_cv.split(X), 1):
     X_train, X_test = X[train_index], X[test_index]
     y_train, y_test = y.iloc[train_index], y.iloc[test_index]
 
-    scaler = MaxAbsScaler()
+    scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 

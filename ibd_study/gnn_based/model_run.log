@@ -57,3 +57,1080 @@
   File: gnn_based_pred_cv.py
   Accuracy: 0.6583 Â± 0.0946
 --------------------------------------------------
+2025-08-21 08:42:29,150 - INFO - Model Run Results with layers - 2025-08-21 08:42:29
+  File: gnn_based_pred.py
+  Accuracy: 0.33 +- 5.551115123125783e-17
+  Confusion Matrix:    0  1  2
+0  0  8  0
+1  0  8  0
+2  0  8  0
+--------------------------------------------------
+2025-08-21 08:43:52,907 - INFO - Model Run Results with layers - 2025-08-21 08:43:52
+  File: gnn_based_pred.py
+  Accuracy: 0.33 +- 5.551115123125783e-17
+  Confusion Matrix:    0  1  2
+0  0  8  0
+1  0  8  0
+2  0  8  0
+--------------------------------------------------
+2025-08-21 09:03:24,975 - INFO - Model Run Results with layers - 2025-08-21 09:03:24
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  2  6  0
+2  2  3  3
+--------------------------------------------------
+2025-08-21 09:04:14,739 - INFO - Model Run Results with layers - 2025-08-21 09:04:14
+  File: gnn_based_pred.py
+  Accuracy: 0.33 +- 0.0
+  Confusion Matrix:    0  1  2
+0  0  8  0
+1  0  8  0
+2  0  8  0
+--------------------------------------------------
+2025-08-21 09:06:51,952 - INFO - Model Run Results with layers - 2025-08-21 09:06:51
+  File: gnn_based_pred.py
+  Accuracy: 0.33 +- 0.0
+  Confusion Matrix:    0  1  2
+0  0  8  0
+1  0  8  0
+2  0  8  0
+--------------------------------------------------
+2025-08-21 09:11:10,231 - INFO - Model Run Results with layers - 2025-08-21 09:11:10
+  File: gnn_based_pred.py
+  Accuracy: 0.33 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  4  1
+1  5  2  1
+2  0  5  3
+--------------------------------------------------
+2025-08-21 09:17:22,825 - INFO - Model Run Results with layers - 2025-08-21 09:17:22
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-21 09:17:51,313 - INFO - Model Run Results with layers - 2025-08-21 09:17:51
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  4  1
+1  3  5  0
+2  2  0  6
+--------------------------------------------------
+2025-08-21 09:18:00,151 - INFO - Model Run Results with layers - 2025-08-21 09:18:00
+  File: gnn_based_pred.py
+  Accuracy: 0.62 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  2  6  0
+2  3  1  4
+--------------------------------------------------
+2025-08-21 09:18:13,891 - INFO - Model Run Results with layers - 2025-08-21 09:18:13
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-21 09:18:24,724 - INFO - Model Run Results with layers - 2025-08-21 09:18:24
+  File: gnn_based_pred.py
+  Accuracy: 0.67 +- 0.0
+  Confusion Matrix:    0  1  2
+0  6  1  1
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-21 09:19:46,164 - INFO - Model Run Results with layers - 2025-08-21 09:19:46
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  3  2
+1  2  5  1
+2  3  0  5
+--------------------------------------------------
+2025-08-21 10:13:13,661 - INFO - Model Run Results with layers - 2025-08-21 10:13:13
+  File: gnn_based_pred.py
+  Accuracy: 0.71 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  0  8  0
+2  3  1  4
+--------------------------------------------------
+2025-08-21 10:45:07,211 - INFO - Model Run Results with layers - 2025-08-21 10:45:07
+  File: gnn_based_pred.py
+  Accuracy:.71 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  1  7  0
+2  3  0  5
+--------------------------------------------------
+2025-08-21 13:32:54,958 - INFO - Model Run Results - 2025-08-21 13:32:54
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.6667 ï¿½ 0.0000
+--------------------------------------------------
+2025-08-21 14:31:06,979 - INFO - Model Run Results - 2025-08-21 14:31:06
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.5833 ± 0.0000
+--------------------------------------------------
+2025-08-21 14:38:28,719 - INFO - Model Run Results - 2025-08-21 14:38:28
+  File: gnn_based_pred_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833 ± 0.0000
+--------------------------------------------------
+2025-08-21 14:46:36,290 - INFO - Model Run Results - 2025-08-21 14:46:36
+  File: gnn_based_pred_cv.py (Fold: 3 / 10)
+  Accuracy: 0.6667 ± 0.0000
+--------------------------------------------------
+2025-08-21 14:54:12,399 - INFO - Model Run Results - 2025-08-21 14:54:12
+  File: gnn_based_pred_cv.py (Fold: 4 / 10)
+  Accuracy: 0.7500 ± 0.0000
+--------------------------------------------------
+2025-08-21 15:01:36,579 - INFO - Model Run Results - 2025-08-21 15:01:36
+  File: gnn_based_pred_cv.py (Fold: 5 / 10)
+  Accuracy: 0.5833 ± 0.0000
+--------------------------------------------------
+2025-08-21 15:13:42,396 - INFO - Model Run Results - 2025-08-21 15:13:42
+  File: gnn_based_pred_cv.py (Fold: 6 / 10)
+  Accuracy: 0.5833 ± 0.0000
+--------------------------------------------------
+2025-08-21 15:45:57,499 - INFO - Model Run Results - 2025-08-21 15:45:57
+  File: gnn_based_pred_cv.py (Fold: 7 / 10)
+  Accuracy: 0.5833 ± 0.0000
+--------------------------------------------------
+2025-08-21 15:53:32,650 - INFO - Model Run Results - 2025-08-21 15:53:32
+  File: gnn_based_pred_cv.py (Fold: 8 / 10)
+  Accuracy: 0.7500 ± 0.0000
+--------------------------------------------------
+2025-08-21 16:01:06,697 - INFO - Model Run Results - 2025-08-21 16:01:06
+  File: gnn_based_pred_cv.py (Fold: 9 / 10)
+  Accuracy: 0.7500 ± 0.0000
+--------------------------------------------------
+2025-08-21 16:08:48,564 - INFO - Model Run Results - 2025-08-21 16:08:48
+  File: gnn_based_pred_cv.py (Fold: 10 / 10)
+  Accuracy: 0.5833 ± 0.0000
+--------------------------------------------------
+2025-08-21 16:08:48,564 - INFO - Model Run Results - 2025-08-21 16:08:48
+  File: gnn_based_pred_cv.py
+  Accuracy: 0.6417 ± 0.0750
+--------------------------------------------------
+2025-08-22 06:41:36,612 - INFO - Model Run Results - 2025-08-22 06:41:36
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.6667
+ Best params: {'C': 51.450484990373404, 'dropout': 0.001009195014488137, 'hidden_dim': 100.0, 'lr': 0.004334945426173097, 'num_layers': 7.0}
+--------------------------------------------------
+2025-08-22 06:51:54,476 - INFO - Model Run Results - 2025-08-22 06:51:54
+  File: gnn_based_pred_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833
+ Best params: {'C': 4.2397814975868275, 'dropout': 0.011781408469335291, 'hidden_dim': 200.0, 'lr': 0.02830932118079471, 'num_layers': 6.0}
+--------------------------------------------------
+2025-08-22 07:00:50,274 - INFO - Model Run Results - 2025-08-22 07:00:50
+  File: gnn_based_pred_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5833
+ Best params: {'C': 1.770473994481535, 'dropout': 0.015272794273676265, 'hidden_dim': 8.0, 'lr': 0.008492388546977992, 'num_layers': 3.0}
+--------------------------------------------------
+2025-08-22 07:10:31,989 - INFO - Model Run Results - 2025-08-22 07:10:31
+  File: gnn_based_pred_cv.py (Fold: 4 / 10)
+  Accuracy: 0.5833
+ Best params: {'C': 70.63653843744858, 'dropout': 0.24382304813265923, 'hidden_dim': 66.0, 'lr': 0.007576460275281328, 'num_layers': 5.0}
+--------------------------------------------------
+2025-08-22 07:27:15,634 - INFO - Model Run Results - 2025-08-22 07:27:15
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.5000
+ Best params: {'C': 0.1640109759939989, 'dropout': 0.004233555834036686, 'hidden_dim': 196.0, 'lr': 0.0013878432651415493, 'num_layers': 1.0}
+--------------------------------------------------
+2025-08-22 08:01:16,908 - INFO - Model Run Results - 2025-08-22 08:01:16
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.6667
+ Best params: {'C': 0.10612845552095207, 'dropout': 0.014679131117699314, 'hidden_dim': 70.0, 'lr': 0.0016267025755605298, 'num_layers': 1.0}
+--------------------------------------------------
+2025-08-22 08:11:29,680 - INFO - Model Run Results with layers - 2025-08-22 08:11:29
+  File: gnn_based_pred.py
+  Accuracy: 0.67 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  3  2
+1  0  8  0
+2  3  0  5
+--------------------------------------------------
+2025-08-22 08:13:16,288 - INFO - Model Run Results with layers - 2025-08-22 08:13:16
+  File: gnn_based_pred.py
+  Accuracy: 0.67 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  3  2
+1  0  8  0
+2  3  0  5
+--------------------------------------------------
+2025-08-22 08:13:29,753 - INFO - Model Run Results with layers - 2025-08-22 08:13:29
+  File: gnn_based_pred.py
+  Accuracy: 0.46 +- 0.0
+  Confusion Matrix:    0  1  2
+0  1  5  2
+1  1  6  1
+2  3  1  4
+--------------------------------------------------
+2025-08-22 08:13:39,425 - INFO - Model Run Results with layers - 2025-08-22 08:13:39
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  3  2
+1  2  6  0
+2  2  1  5
+--------------------------------------------------
+2025-08-22 08:13:50,056 - INFO - Model Run Results with layers - 2025-08-22 08:13:50
+  File: gnn_based_pred.py
+  Accuracy: 0.46 +- 0.0
+  Confusion Matrix:    0  1  2
+0  8  0  0
+1  5  3  0
+2  7  1  0
+--------------------------------------------------
+2025-08-22 08:30:02,397 - INFO - Model Run Results with layers - 2025-08-22 08:30:02
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  3  2
+1  2  6  0
+2  2  1  5
+--------------------------------------------------
+2025-08-22 08:40:37,305 - INFO - Model Run Results - 2025-08-22 08:40:37
+  File: gnn_based_pred_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833
+ Best params: {'C': 1.2991927532577696, 'dropout': 0.11932314630725231, 'hidden_dim': 92.0, 'lr': 0.0003044340215994566, 'num_layers': 4.0}
+--------------------------------------------------
+2025-08-22 09:41:21,761 - INFO - Model Run Results - 2025-08-22 09:41:21
+  File: gnn_based_pred_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5000
+ Best params: {'C': 9.067295154249198, 'dropout': 0.0030574926386328183, 'hidden_dim': 226.0, 'lr': 0.01451532645885306, 'num_layers': 7.0}
+--------------------------------------------------
+2025-08-22 10:22:40,955 - INFO - Model Run Results with layers - 2025-08-22 10:22:40
+  File: gnn_based_pred.py
+  Accuracy: 0.62 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  2  3
+1  1  7  0
+2  3  0  5
+--------------------------------------------------
+2025-08-22 10:27:17,470 - INFO - Model Run Results with layers - 2025-08-22 10:27:17
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  4  1
+1  0  8  0
+2  5  1  2
+--------------------------------------------------
+2025-08-22 10:27:24,935 - INFO - Model Run Results with layers - 2025-08-22 10:27:24
+  File: gnn_based_pred.py
+  Accuracy: 0.50 +- 0.0
+  Confusion Matrix:    0  1  2
+0  1  5  2
+1  0  7  1
+2  3  1  4
+--------------------------------------------------
+2025-08-22 10:27:33,209 - INFO - Model Run Results with layers - 2025-08-22 10:27:33
+  File: gnn_based_pred.py
+  Accuracy: 0.62 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  1  6  1
+2  3  0  5
+--------------------------------------------------
+2025-08-22 10:28:01,886 - INFO - Model Run Results with layers - 2025-08-22 10:28:01
+  File: gnn_based_pred.py
+  Accuracy: 0.33 +- 0.0
+  Confusion Matrix:    0  1  2
+0  0  8  0
+1  0  8  0
+2  0  8  0
+--------------------------------------------------
+2025-08-22 10:28:09,971 - INFO - Model Run Results with layers - 2025-08-22 10:28:09
+  File: gnn_based_pred.py
+  Accuracy: 0.50 +- 0.0
+  Confusion Matrix:    0  1  2
+0  0  5  3
+1  0  6  2
+2  0  2  6
+--------------------------------------------------
+2025-08-22 10:28:17,255 - INFO - Model Run Results with layers - 2025-08-22 10:28:17
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  2  5  1
+1  0  8  0
+2  1  4  3
+--------------------------------------------------
+2025-08-22 10:28:28,871 - INFO - Model Run Results with layers - 2025-08-22 10:28:28
+  File: gnn_based_pred.py
+  Accuracy: 0.62 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  2  2
+1  1  6  1
+2  3  0  5
+--------------------------------------------------
+2025-08-22 10:28:36,732 - INFO - Model Run Results with layers - 2025-08-22 10:28:36
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  2  3  3
+1  0  7  1
+2  2  1  5
+--------------------------------------------------
+2025-08-22 10:28:45,894 - INFO - Model Run Results with layers - 2025-08-22 10:28:45
+  File: gnn_based_pred.py
+  Accuracy: 0.67 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  1  6  1
+2  3  0  5
+--------------------------------------------------
+2025-08-22 10:30:11,986 - INFO - Model Run Results with layers - 2025-08-22 10:30:11
+  File: gnn_based_pred.py
+  Accuracy: 0.62 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  3  2
+1  0  7  1
+2  3  0  5
+--------------------------------------------------
+2025-08-22 10:36:06,099 - INFO - Model Run Results with layers - 2025-08-22 10:36:06
+  File: gnn_based_pred.py
+  Accuracy: 0.67 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  1  7  0
+2  3  0  5
+--------------------------------------------------
+2025-08-22 10:48:42,536 - INFO - Model Run Results with layers - 2025-08-22 10:48:42
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  2  4  2
+1  1  7  0
+2  3  0  5
+--------------------------------------------------
+2025-08-22 11:04:19,000 - INFO - Model Run Results with layers - 2025-08-22 11:04:18
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  2  4  2
+1  1  7  0
+2  3  1  4
+--------------------------------------------------
+2025-08-22 11:29:35,108 - INFO - Model Run Results with layers - 2025-08-22 11:29:35
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  4  4  0
+2  3  0  5
+--------------------------------------------------
+2025-08-22 11:53:56,711 - INFO - Model Run Results with layers - 2025-08-22 11:53:56
+  File: gnn_based_pred.py
+  Accuracy: 0.62 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  1  2
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-22 12:28:09,069 - INFO - Model Run Results with layers - 2025-08-22 12:28:09
+  File: gnn_based_pred.py
+  Accuracy: 0.38 +- 0.0
+  Confusion Matrix:    0  1  2
+0  8  0  0
+1  7  0  1
+2  7  0  1
+--------------------------------------------------
+2025-08-22 12:51:07,835 - INFO - Model Run Results with layers - 2025-08-22 12:51:07
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-22 14:03:36,074 - INFO - Model Run Results with layers - 2025-08-22 14:03:36
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  2  6  0
+2  3  2  3
+--------------------------------------------------
+2025-08-22 14:07:37,202 - INFO - Model Run Results with layers - 2025-08-22 14:07:37
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  1  7  0
+2  3  3  2
+--------------------------------------------------
+2025-08-22 14:38:08,389 - INFO - Model Run Results with layers - 2025-08-22 14:38:08
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  2  4  2
+1  0  6  2
+2  1  1  6
+--------------------------------------------------
+2025-08-22 15:19:19,655 - INFO - Model Run Results - 2025-08-22 15:19:19
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.04631090005737592, 'hidden_dim': 4.0, 'lr': 0.02650773785477839, 'num_layers': 7.0, 'weight_decay': 0.0005580448288052585}
+--------------------------------------------------
+2025-08-22 15:36:44,731 - INFO - Model Run Results - 2025-08-22 15:36:44
+  File: gnn_based_pred_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833
+ Best params: {'dropout': 0.008313921565241328, 'hidden_dim': 182.0, 'lr': 0.0060438777076458365, 'num_layers': 5.0, 'weight_decay': 0.001091243047993223}
+--------------------------------------------------
+2025-08-22 15:55:12,567 - INFO - Model Run Results - 2025-08-22 15:55:12
+  File: gnn_based_pred_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.09617445067307219, 'hidden_dim': 74.0, 'lr': 0.003662273107152102, 'num_layers': 7.0, 'weight_decay': 0.0323554873427163}
+--------------------------------------------------
+2025-08-22 16:16:39,341 - INFO - Model Run Results - 2025-08-22 16:16:39
+  File: gnn_based_pred_cv.py (Fold: 4 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.003387637307137118, 'hidden_dim': 48.0, 'lr': 0.01166443930892623, 'num_layers': 6.0, 'weight_decay': 0.0003644836764145392}
+--------------------------------------------------
+2025-08-22 16:31:11,408 - INFO - Model Run Results - 2025-08-22 16:31:11
+  File: gnn_based_pred_cv.py (Fold: 5 / 10)
+  Accuracy: 0.3333
+ Best params: {'dropout': 0.025464506564847465, 'hidden_dim': 64.0, 'lr': 0.00662713337659175, 'num_layers': 3.0, 'weight_decay': 0.0016390780220350326}
+--------------------------------------------------
+2025-08-22 16:53:08,103 - INFO - Model Run Results - 2025-08-22 16:53:08
+  File: gnn_based_pred_cv.py (Fold: 6 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.0207517258358609, 'hidden_dim': 172.0, 'lr': 0.010710452300772395, 'num_layers': 7.0, 'weight_decay': 0.0026681017549127013}
+--------------------------------------------------
+2025-08-22 17:11:24,798 - INFO - Model Run Results - 2025-08-22 17:11:24
+  File: gnn_based_pred_cv.py (Fold: 7 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.03657850042195562, 'hidden_dim': 28.0, 'lr': 0.005049326394997154, 'num_layers': 7.0, 'weight_decay': 0.012556218091091698}
+--------------------------------------------------
+2025-08-22 18:07:50,828 - INFO - Model Run Results - 2025-08-22 18:07:50
+  File: gnn_based_pred_cv.py (Fold: 8 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.07396016724528102, 'hidden_dim': 256.0, 'lr': 0.0015946218366511868, 'num_layers': 5.0, 'weight_decay': 0.01001942037362442}
+--------------------------------------------------
+2025-08-25 06:18:14,803 - INFO - Model Run Results with layers - 2025-08-25 06:18:14
+  File: gnn_based_pred.py
+  Accuracy: 0.50 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  2  6  0
+2  6  0  2
+--------------------------------------------------
+2025-08-25 06:25:05,533 - INFO - Model Run Results with layers - 2025-08-25 06:25:05
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 06:34:43,930 - INFO - Model Run Results with layers - 2025-08-25 06:34:43
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  5  3  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 06:38:16,474 - INFO - Model Run Results with layers - 2025-08-25 06:38:16
+  File: gnn_based_pred.py
+  Accuracy: 0.62 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  2  6  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 06:41:31,231 - INFO - Model Run Results with layers - 2025-08-25 06:41:31
+  File: gnn_based_pred.py
+  Accuracy: 0.62 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  1  3
+1  2  6  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 06:45:20,005 - INFO - Model Run Results with layers - 2025-08-25 06:45:20
+  File: gnn_based_pred.py
+  Accuracy: 0.50 +- 0.0
+  Confusion Matrix:    0  1  2
+0  6  2  0
+1  4  4  0
+2  3  3  2
+--------------------------------------------------
+2025-08-25 06:48:48,072 - INFO - Model Run Results with layers - 2025-08-25 06:48:48
+  File: gnn_based_pred.py
+  Accuracy: 0.67 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  1  7  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 07:02:24,563 - INFO - Model Run Results with layers - 2025-08-25 07:02:24
+  File: gnn_based_pred.py
+  Accuracy: 0.62 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  3  2
+1  1  7  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 07:05:44,563 - INFO - Model Run Results with layers - 2025-08-25 07:05:44
+  File: gnn_based_pred.py
+  Accuracy: 0.62 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  2  6  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 07:09:25,680 - INFO - Model Run Results with layers - 2025-08-25 07:09:25
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  3  5  0
+2  3  1  4
+--------------------------------------------------
+2025-08-25 07:12:57,643 - INFO - Model Run Results with layers - 2025-08-25 07:12:57
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  1  2
+1  5  3  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 07:16:28,191 - INFO - Model Run Results with layers - 2025-08-25 07:16:28
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  5  3  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 07:17:48,925 - INFO - Model Run Results with layers - 2025-08-25 07:17:48
+  File: gnn_based_pred.py
+  Accuracy: 0.33 +- 0.0
+  Confusion Matrix:    0  1  2
+0  0  8  0
+1  0  8  0
+2  0  8  0
+--------------------------------------------------
+2025-08-25 07:23:24,065 - INFO - Model Run Results with layers - 2025-08-25 07:23:24
+  File: gnn_based_pred.py
+  Accuracy: 0.67 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  1  7  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 07:30:19,791 - INFO - Model Run Results with layers - 2025-08-25 07:30:19
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  0  7  1
+1  0  8  0
+2  0  3  5
+--------------------------------------------------
+2025-08-25 07:38:17,662 - INFO - Model Run Results with layers - 2025-08-25 07:38:17
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  2  3  3
+1  1  7  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 07:44:26,827 - INFO - Model Run Results with layers - 2025-08-25 07:44:26
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 07:50:53,709 - INFO - Model Run Results with layers - 2025-08-25 07:50:53
+  File: gnn_based_pred.py
+  Accuracy: 0.67 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  4  1
+1  0  8  0
+2  1  2  5
+--------------------------------------------------
+2025-08-25 07:56:25,809 - INFO - Model Run Results with layers - 2025-08-25 07:56:25
+  File: gnn_based_pred.py
+  Accuracy: 0.38 +- 0.0
+  Confusion Matrix:    0  1  2
+0  1  7  0
+1  0  8  0
+2  0  8  0
+--------------------------------------------------
+2025-08-25 08:02:40,683 - INFO - Model Run Results with layers - 2025-08-25 08:02:40
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  2  6  0
+2  3  1  4
+--------------------------------------------------
+2025-08-25 08:14:57,591 - INFO - Model Run Results with layers - 2025-08-25 08:14:57
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  2  2
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 08:38:38,281 - INFO - Model Run Results with layers - 2025-08-25 08:38:38
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  4  4  0
+2  3  0  5
+--------------------------------------------------
+2025-08-25 09:05:03,706 - INFO - Model Run Results with layers - 2025-08-25 09:05:03
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  2  6  0
+2  3  1  4
+--------------------------------------------------
+2025-08-25 09:51:18,389 - INFO - Model Run Results - 2025-08-25 09:51:18
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.7500
+ Best params: {'dropout': 0.32382865477174766, 'hidden_dim': 152.0, 'lr': 0.00012818798374462353, 'num_heads': 1, 'num_layers': 5.0, 'weight_decay': 0.009737737690259084}
+--------------------------------------------------
+2025-08-25 10:29:13,609 - INFO - Model Run Results - 2025-08-25 10:29:13
+  File: gnn_based_pred_cv.py (Fold: 2 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.5999054276147869, 'hidden_dim': 72.0, 'lr': 0.00022973572577688258, 'num_heads': 2, 'num_layers': 7.0, 'weight_decay': 0.0001623615010328736}
+--------------------------------------------------
+2025-08-25 11:11:43,882 - INFO - Model Run Results - 2025-08-25 11:11:43
+  File: gnn_based_pred_cv.py (Fold: 3 / 10)
+  Accuracy: 0.3333
+ Best params: {'dropout': 0.3769913428413863, 'hidden_dim': 176.0, 'lr': 0.0012133730476223115, 'num_heads': 8, 'num_layers': 4.0, 'weight_decay': 0.0013845918336428179}
+--------------------------------------------------
+2025-08-25 11:43:01,295 - INFO - Model Run Results - 2025-08-25 11:43:01
+  File: gnn_based_pred_cv.py (Fold: 4 / 10)
+  Accuracy: 0.7500
+ Best params: {'dropout': 0.3408930164087828, 'hidden_dim': 56.0, 'lr': 0.00019738675120906178, 'num_heads': 4, 'num_layers': 5.0, 'weight_decay': 0.0002932129287002102}
+--------------------------------------------------
+2025-08-25 12:10:20,245 - INFO - Model Run Results - 2025-08-25 12:10:20
+  File: gnn_based_pred_cv.py (Fold: 5 / 10)
+  Accuracy: 0.7500
+ Best params: {'dropout': 0.5210410720033157, 'hidden_dim': 88.0, 'lr': 0.00014983428546911618, 'num_heads': 4, 'num_layers': 3.0, 'weight_decay': 0.002582352147231191}
+--------------------------------------------------
+2025-08-25 12:49:04,260 - INFO - Model Run Results - 2025-08-25 12:49:04
+  File: gnn_based_pred_cv.py (Fold: 6 / 10)
+  Accuracy: 0.4167
+ Best params: {'dropout': 0.030690765027969247, 'hidden_dim': 152.0, 'lr': 0.00010460367940598797, 'num_heads': 8, 'num_layers': 3.0, 'weight_decay': 0.0007610139672481189}
+--------------------------------------------------
+2025-08-25 13:17:58,145 - INFO - Model Run Results - 2025-08-25 13:17:58
+  File: gnn_based_pred_cv.py (Fold: 7 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.27614042737141825, 'hidden_dim': 96.0, 'lr': 0.00526992013902567, 'num_heads': 1, 'num_layers': 2.0, 'weight_decay': 0.006041733847720304}
+--------------------------------------------------
+2025-08-25 13:46:21,918 - INFO - Model Run Results - 2025-08-25 13:46:21
+  File: gnn_based_pred_cv.py (Fold: 8 / 10)
+  Accuracy: 0.4167
+ Best params: {'dropout': 0.0956037070632093, 'hidden_dim': 40.0, 'lr': 0.0002491048848555733, 'num_heads': 4, 'num_layers': 3.0, 'weight_decay': 0.004194557744412032}
+--------------------------------------------------
+2025-08-25 14:23:11,586 - INFO - Model Run Results - 2025-08-25 14:23:11
+  File: gnn_based_pred_cv.py (Fold: 9 / 10)
+  Accuracy: 0.5833
+ Best params: {'dropout': 0.21713926465145672, 'hidden_dim': 72.0, 'lr': 0.00015328292527549712, 'num_heads': 2, 'num_layers': 2.0, 'weight_decay': 0.0022328636821784776}
+--------------------------------------------------
+2025-08-25 14:55:56,833 - INFO - Model Run Results - 2025-08-25 14:55:56
+  File: gnn_based_pred_cv.py (Fold: 10 / 10)
+  Accuracy: 0.7500
+ Best params: {'dropout': 0.005229935567801658, 'hidden_dim': 24.0, 'lr': 0.00019228260486318393, 'num_heads': 1, 'num_layers': 3.0, 'weight_decay': 0.018055764310317968}
+--------------------------------------------------
+2025-08-25 14:55:56,836 - INFO - Model Run Results - 2025-08-25 14:55:56
+  File: gnn_based_pred_cv.py
+  Accuracy: 0.5917 ± 0.1557
+--------------------------------------------------
+2025-08-25 15:17:57,750 - INFO - Model Run Results - 2025-08-25 15:17:57
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.3983265879011245, 'hidden_dim': 112.0, 'lr': 0.00661370628406163, 'num_heads': 1, 'num_layers': 7.0, 'weight_decay': 0.07478613576876425}
+--------------------------------------------------
+2025-08-25 15:33:37,105 - INFO - Model Run Results - 2025-08-25 15:33:37
+  File: gnn_based_pred_cv.py (Fold: 2 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.45219271514011816, 'hidden_dim': 168.0, 'lr': 0.0016354255908453473, 'num_heads': 4, 'num_layers': 6.0, 'weight_decay': 0.10948517545406342}
+--------------------------------------------------
+2025-08-25 15:47:42,478 - INFO - Model Run Results - 2025-08-25 15:47:42
+  File: gnn_based_pred_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5833
+ Best params: {'dropout': 0.4539668452270671, 'hidden_dim': 176.0, 'lr': 0.008581734266896235, 'num_heads': 8, 'num_layers': 4.0, 'weight_decay': 0.42696467083135}
+--------------------------------------------------
+2025-08-25 15:58:52,221 - INFO - Model Run Results - 2025-08-25 15:58:52
+  File: gnn_based_pred_cv.py (Fold: 4 / 10)
+  Accuracy: 0.8333
+ Best params: {'dropout': 0.3248413280862779, 'hidden_dim': 112.0, 'lr': 0.00014077782320462607, 'num_heads': 2, 'num_layers': 4.0, 'weight_decay': 0.00011517534279552276}
+--------------------------------------------------
+2025-08-25 16:09:34,211 - INFO - Model Run Results - 2025-08-25 16:09:34
+  File: gnn_based_pred_cv.py (Fold: 5 / 10)
+  Accuracy: 0.5833
+ Best params: {'dropout': 0.5034585226131469, 'hidden_dim': 144.0, 'lr': 0.000158571734044985, 'num_heads': 2, 'num_layers': 4.0, 'weight_decay': 0.0003332567359964424}
+--------------------------------------------------
+2025-08-25 16:22:19,215 - INFO - Model Run Results - 2025-08-25 16:22:19
+  File: gnn_based_pred_cv.py (Fold: 6 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.23190771483929884, 'hidden_dim': 200.0, 'lr': 0.001423692825802557, 'num_heads': 1, 'num_layers': 3.0, 'weight_decay': 0.0180643408542336}
+--------------------------------------------------
+2025-08-25 16:32:54,228 - INFO - Model Run Results - 2025-08-25 16:32:54
+  File: gnn_based_pred_cv.py (Fold: 7 / 10)
+  Accuracy: 0.4167
+ Best params: {'dropout': 0.23494813159872854, 'hidden_dim': 120.0, 'lr': 0.00041722453308618197, 'num_heads': 2, 'num_layers': 6.0, 'weight_decay': 0.00025973658416327043}
+--------------------------------------------------
+2025-08-25 16:44:17,932 - INFO - Model Run Results - 2025-08-25 16:44:17
+  File: gnn_based_pred_cv.py (Fold: 8 / 10)
+  Accuracy: 0.4167
+ Best params: {'dropout': 0.3545219531675118, 'hidden_dim': 104.0, 'lr': 0.00010014886891987808, 'num_heads': 1, 'num_layers': 2.0, 'weight_decay': 0.00025894850424803883}
+--------------------------------------------------
+2025-08-25 16:56:23,238 - INFO - Model Run Results - 2025-08-25 16:56:23
+  File: gnn_based_pred_cv.py (Fold: 9 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.5511619812412637, 'hidden_dim': 144.0, 'lr': 0.0002392051564205671, 'num_heads': 8, 'num_layers': 4.0, 'weight_decay': 0.0028894030136032223}
+--------------------------------------------------
+2025-08-25 17:12:58,724 - INFO - Model Run Results - 2025-08-25 17:12:58
+  File: gnn_based_pred_cv.py (Fold: 10 / 10)
+  Accuracy: 0.5833
+ Best params: {'dropout': 0.3149904970608147, 'hidden_dim': 232.0, 'lr': 0.002119737653545212, 'num_heads': 2, 'num_layers': 2.0, 'weight_decay': 0.0001111804763355221}
+--------------------------------------------------
+2025-08-25 17:12:58,724 - INFO - Model Run Results - 2025-08-25 17:12:58
+  File: gnn_based_pred_cv.py
+  Accuracy: 0.5750 ± 0.1205
+--------------------------------------------------
+2025-08-25 17:50:36,309 - INFO - Model Run Results - 2025-08-25 17:50:36
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.10310363605290933, 'hidden_dim': 232.0, 'lr': 0.0013038802189715233, 'num_heads': 4, 'num_layers': 4.0, 'weight_decay': 0.0002181800116850551}
+--------------------------------------------------
+2025-08-25 18:04:49,613 - INFO - Model Run Results - 2025-08-25 18:04:49
+  File: gnn_based_pred_cv.py (Fold: 2 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.2353293334256229, 'hidden_dim': 192.0, 'lr': 0.0005039940978954746, 'num_heads': 1, 'num_layers': 4.0, 'weight_decay': 0.0018250724972864835}
+--------------------------------------------------
+2025-08-25 18:15:51,422 - INFO - Model Run Results - 2025-08-25 18:15:51
+  File: gnn_based_pred_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5833
+ Best params: {'dropout': 0.4700149646102732, 'hidden_dim': 120.0, 'lr': 0.0002628414395919294, 'num_heads': 4, 'num_layers': 5.0, 'weight_decay': 0.029071756304213953}
+--------------------------------------------------
+2025-08-25 18:29:39,667 - INFO - Model Run Results - 2025-08-25 18:29:39
+  File: gnn_based_pred_cv.py (Fold: 4 / 10)
+  Accuracy: 0.8333
+ Best params: {'dropout': 0.4760432869510312, 'hidden_dim': 160.0, 'lr': 0.0007886244731163356, 'num_heads': 1, 'num_layers': 5.0, 'weight_decay': 0.00032337452588724263}
+--------------------------------------------------
+2025-08-25 18:42:01,623 - INFO - Model Run Results - 2025-08-25 18:42:01
+  File: gnn_based_pred_cv.py (Fold: 5 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.3034529467033889, 'hidden_dim': 240.0, 'lr': 0.0001546184248520652, 'num_heads': 1, 'num_layers': 2.0, 'weight_decay': 0.003865573905847824}
+--------------------------------------------------
+2025-08-25 18:53:43,998 - INFO - Model Run Results - 2025-08-25 18:53:43
+  File: gnn_based_pred_cv.py (Fold: 6 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.03569611555213442, 'hidden_dim': 72.0, 'lr': 0.00026705460602777323, 'num_heads': 4, 'num_layers': 6.0, 'weight_decay': 0.0167611499579428}
+--------------------------------------------------
+2025-08-25 19:03:48,107 - INFO - Model Run Results - 2025-08-25 19:03:48
+  File: gnn_based_pred_cv.py (Fold: 7 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.37287019039766656, 'hidden_dim': 32.0, 'lr': 0.0002523624990917718, 'num_heads': 2, 'num_layers': 1.0, 'weight_decay': 0.0050734329526080394}
+--------------------------------------------------
+2025-08-25 19:15:48,545 - INFO - Model Run Results - 2025-08-25 19:15:48
+  File: gnn_based_pred_cv.py (Fold: 8 / 10)
+  Accuracy: 0.7500
+ Best params: {'dropout': 0.34382137076328995, 'hidden_dim': 48.0, 'lr': 0.0007212868558515725, 'num_heads': 8, 'num_layers': 3.0, 'weight_decay': 0.003427252576074214}
+--------------------------------------------------
+2025-08-25 19:29:15,774 - INFO - Model Run Results - 2025-08-25 19:29:15
+  File: gnn_based_pred_cv.py (Fold: 9 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.41136370243097, 'hidden_dim': 104.0, 'lr': 0.0005874224238634455, 'num_heads': 4, 'num_layers': 5.0, 'weight_decay': 0.0007335690820239549}
+--------------------------------------------------
+2025-08-25 19:41:00,755 - INFO - Model Run Results - 2025-08-25 19:41:00
+  File: gnn_based_pred_cv.py (Fold: 10 / 10)
+  Accuracy: 0.7500
+ Best params: {'dropout': 0.07990192164394114, 'hidden_dim': 112.0, 'lr': 0.00023676076323920548, 'num_heads': 2, 'num_layers': 6.0, 'weight_decay': 0.009068141246393217}
+--------------------------------------------------
+2025-08-25 19:41:00,755 - INFO - Model Run Results - 2025-08-25 19:41:00
+  File: gnn_based_pred_cv.py
+  Accuracy: 0.6417 ± 0.1121
+--------------------------------------------------
+2025-08-25 20:26:34,286 - INFO - Model Run Results - 2025-08-25 20:26:34
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.5833
+ Best params: {'dropout': 0.3752926346035044, 'hidden_dim': 16.0, 'lr': 0.003426874867343774, 'num_heads': 1, 'num_layers': 5.0, 'weight_decay': 0.0001392440090007229}
+--------------------------------------------------
+2025-08-25 20:38:41,530 - INFO - Model Run Results - 2025-08-25 20:38:41
+  File: gnn_based_pred_cv.py (Fold: 2 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.3540492636118896, 'hidden_dim': 128.0, 'lr': 0.004080407393919234, 'num_heads': 8, 'num_layers': 1.0, 'weight_decay': 0.0024185263126112262}
+--------------------------------------------------
+2025-08-25 20:51:10,637 - INFO - Model Run Results - 2025-08-25 20:51:10
+  File: gnn_based_pred_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.3692833574740546, 'hidden_dim': 16.0, 'lr': 0.004421068527818817, 'num_heads': 4, 'num_layers': 4.0, 'weight_decay': 0.040636043137096234}
+--------------------------------------------------
+2025-08-25 21:05:06,586 - INFO - Model Run Results - 2025-08-25 21:05:06
+  File: gnn_based_pred_cv.py (Fold: 4 / 10)
+  Accuracy: 0.8333
+ Best params: {'dropout': 0.062136204257117036, 'hidden_dim': 192.0, 'lr': 0.00037276426654449653, 'num_heads': 1, 'num_layers': 5.0, 'weight_decay': 0.0006082984631204637}
+--------------------------------------------------
+2025-08-25 21:17:54,701 - INFO - Model Run Results - 2025-08-25 21:17:54
+  File: gnn_based_pred_cv.py (Fold: 5 / 10)
+  Accuracy: 0.5833
+ Best params: {'dropout': 0.18434290245412374, 'hidden_dim': 80.0, 'lr': 0.00011674112174583132, 'num_heads': 2, 'num_layers': 5.0, 'weight_decay': 0.00022912496988429382}
+--------------------------------------------------
+2025-08-25 21:27:30,975 - INFO - Model Run Results - 2025-08-25 21:27:30
+  File: gnn_based_pred_cv.py (Fold: 6 / 10)
+  Accuracy: 0.5833
+ Best params: {'dropout': 0.0017504826448190985, 'hidden_dim': 56.0, 'lr': 0.004302896426154048, 'num_heads': 8, 'num_layers': 4.0, 'weight_decay': 0.0016083527193483439}
+--------------------------------------------------
+2025-08-25 21:39:01,585 - INFO - Model Run Results - 2025-08-25 21:39:01
+  File: gnn_based_pred_cv.py (Fold: 7 / 10)
+  Accuracy: 0.4167
+ Best params: {'dropout': 0.28681683248706735, 'hidden_dim': 80.0, 'lr': 0.0009968415113709834, 'num_heads': 2, 'num_layers': 7.0, 'weight_decay': 0.0016969732260460899}
+--------------------------------------------------
+2025-08-25 21:54:19,417 - INFO - Model Run Results - 2025-08-25 21:54:19
+  File: gnn_based_pred_cv.py (Fold: 8 / 10)
+  Accuracy: 0.5833
+ Best params: {'dropout': 0.19046208768474826, 'hidden_dim': 208.0, 'lr': 0.0001796363859521183, 'num_heads': 2, 'num_layers': 2.0, 'weight_decay': 0.0019394285632637642}
+--------------------------------------------------
+2025-08-25 22:09:11,618 - INFO - Model Run Results - 2025-08-25 22:09:11
+  File: gnn_based_pred_cv.py (Fold: 9 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.4943936678152547, 'hidden_dim': 136.0, 'lr': 0.00010440100812255179, 'num_heads': 1, 'num_layers': 5.0, 'weight_decay': 0.0014913499857189215}
+--------------------------------------------------
+2025-08-25 22:20:14,732 - INFO - Model Run Results - 2025-08-25 22:20:14
+  File: gnn_based_pred_cv.py (Fold: 10 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.5093119950206695, 'hidden_dim': 72.0, 'lr': 0.0004967324254058985, 'num_heads': 1, 'num_layers': 6.0, 'weight_decay': 0.0032401345985345925}
+--------------------------------------------------
+2025-08-25 22:20:14,732 - INFO - Model Run Results - 2025-08-25 22:20:14
+  File: gnn_based_pred_cv.py
+  Accuracy: 0.6083 ± 0.1057
+--------------------------------------------------
+2025-08-26 06:14:23,352 - INFO - Model Run Results - 2025-08-26 06:14:23
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.5513374492856938, 'hidden_dim': 48.0, 'lr': 0.0001529316453132604, 'num_heads': 4, 'num_layers': 1.0, 'weight_decay': 0.001081449973190759}
+--------------------------------------------------
+2025-08-28 05:49:02,655 - INFO - Model Run Results with layers - 2025-08-28 05:49:02
+  File: gnn_based_pred.py
+  Accuracy: 0.50 +- 0.0
+  Confusion Matrix:    0  1  2
+0  1  7  0
+1  0  8  0
+2  0  5  3
+--------------------------------------------------
+2025-08-28 08:44:41,836 - INFO - Model Run Results with layers - 2025-08-28 08:44:41
+  File: gnn_based_pred.py
+  Accuracy: 0.50 +- 0.0
+  Confusion Matrix:    0  1  2
+0  4  4  0
+1  5  3  0
+2  2  1  5
+--------------------------------------------------
+2025-08-28 08:45:07,310 - INFO - Model Run Results with layers - 2025-08-28 08:45:07
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  0  8  0
+1  0  8  0
+2  0  3  5
+--------------------------------------------------
+2025-08-28 08:46:00,717 - INFO - Model Run Results with layers - 2025-08-28 08:46:00
+  File: gnn_based_pred.py
+  Accuracy: 0.71 +- 0.0
+  Confusion Matrix:    0  1  2
+0  7  1  0
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-28 08:46:13,840 - INFO - Model Run Results with layers - 2025-08-28 08:46:13
+  File: gnn_based_pred.py
+  Accuracy: 0.71 +- 0.0
+  Confusion Matrix:    0  1  2
+0  7  1  0
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-28 08:46:20,795 - INFO - Model Run Results with layers - 2025-08-28 08:46:20
+  File: gnn_based_pred.py
+  Accuracy: 0.71 +- 0.0
+  Confusion Matrix:    0  1  2
+0  7  1  0
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-28 08:46:42,842 - INFO - Model Run Results with layers - 2025-08-28 08:46:42
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  2  3
+1  4  4  0
+2  1  1  6
+--------------------------------------------------
+2025-08-28 08:46:54,801 - INFO - Model Run Results with layers - 2025-08-28 08:46:54
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  6  1  1
+1  6  2  0
+2  2  1  5
+--------------------------------------------------
+2025-08-28 08:47:04,036 - INFO - Model Run Results with layers - 2025-08-28 08:47:04
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  6  2  0
+1  5  3  0
+2  3  0  5
+--------------------------------------------------
+2025-08-28 08:47:10,387 - INFO - Model Run Results with layers - 2025-08-28 08:47:10
+  File: gnn_based_pred.py
+  Accuracy: 0.71 +- 0.0
+  Confusion Matrix:    0  1  2
+0  7  1  0
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-28 08:57:26,608 - INFO - Model Run Results with layers - 2025-08-28 08:57:26
+  File: gnn_based_pred.py
+  Accuracy: 0.33 +- 0.0
+  Confusion Matrix:    0  1  2
+0  8  0  0
+1  8  0  0
+2  8  0  0
+--------------------------------------------------
+2025-08-28 08:57:38,058 - INFO - Model Run Results with layers - 2025-08-28 08:57:38
+  File: gnn_based_pred.py
+  Accuracy: 0.33 +- 0.0
+  Confusion Matrix:    0  1  2
+0  8  0  0
+1  8  0  0
+2  8  0  0
+--------------------------------------------------
+2025-08-28 08:57:46,174 - INFO - Model Run Results with layers - 2025-08-28 08:57:46
+  File: gnn_based_pred.py
+  Accuracy: 0.33 +- 0.0
+  Confusion Matrix:    0  1  2
+0  8  0  0
+1  8  0  0
+2  8  0  0
+--------------------------------------------------
+2025-08-28 08:58:11,312 - INFO - Model Run Results with layers - 2025-08-28 08:58:11
+  File: gnn_based_pred.py
+  Accuracy: 0.33 +- 0.0
+  Confusion Matrix:    0  1  2
+0  8  0  0
+1  8  0  0
+2  8  0  0
+--------------------------------------------------
+2025-08-28 08:59:30,363 - INFO - Model Run Results with layers - 2025-08-28 08:59:30
+  File: gnn_based_pred.py
+  Accuracy: 0.33 +- 0.0
+  Confusion Matrix:    0  1  2
+0  8  0  0
+1  8  0  0
+2  8  0  0
+--------------------------------------------------
+2025-08-28 09:02:30,791 - INFO - Model Run Results with layers - 2025-08-28 09:02:30
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  3  2  3
+1  4  4  0
+2  1  1  6
+--------------------------------------------------
+2025-08-28 09:02:43,402 - INFO - Model Run Results with layers - 2025-08-28 09:02:43
+  File: gnn_based_pred.py
+  Accuracy: 0.71 +- 0.0
+  Confusion Matrix:    0  1  2
+0  7  1  0
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-28 09:04:34,941 - INFO - Model Run Results with layers - 2025-08-28 09:04:34
+  File: gnn_based_pred.py
+  Accuracy: 0.71 +- 0.0
+  Confusion Matrix:    0  1  2
+0  7  1  0
+1  3  5  0
+2  3  0  5
+--------------------------------------------------
+2025-08-28 09:04:48,618 - INFO - Model Run Results with layers - 2025-08-28 09:04:48
+  File: gnn_based_pred.py
+  Accuracy: 0.46 +- 0.0
+  Confusion Matrix:    0  1  2
+0  2  2  4
+1  2  2  4
+2  1  0  7
+--------------------------------------------------
+2025-08-28 09:04:56,831 - INFO - Model Run Results with layers - 2025-08-28 09:04:56
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  7  1  0
+1  6  2  0
+2  2  1  5
+--------------------------------------------------
+2025-08-28 09:05:18,383 - INFO - Model Run Results with layers - 2025-08-28 09:05:18
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  1  5  2
+1  1  6  1
+2  0  2  6
+--------------------------------------------------
+2025-08-28 09:06:14,149 - INFO - Model Run Results with layers - 2025-08-28 09:06:14
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  1  6  1
+1  0  8  0
+2  1  2  5
+--------------------------------------------------
+2025-08-28 09:06:47,013 - INFO - Model Run Results with layers - 2025-08-28 09:06:47
+  File: gnn_based_pred.py
+  Accuracy: 0.62 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  1  2
+1  3  3  2
+2  1  0  7
+--------------------------------------------------
+2025-08-28 09:07:04,592 - INFO - Model Run Results with layers - 2025-08-28 09:07:04
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  1  2
+1  4  2  2
+2  2  0  6
+--------------------------------------------------
+2025-08-28 09:07:27,779 - INFO - Model Run Results with layers - 2025-08-28 09:07:27
+  File: gnn_based_pred.py
+  Accuracy: 0.58 +- 0.0
+  Confusion Matrix:    0  1  2
+0  5  1  2
+1  3  3  2
+2  1  1  6
+--------------------------------------------------
+2025-08-28 09:09:40,857 - INFO - Model Run Results with layers - 2025-08-28 09:09:40
+  File: gnn_based_pred.py
+  Accuracy: 0.54 +- 0.0
+  Confusion Matrix:    0  1  2
+0  6  1  1
+1  4  4  0
+2  3  2  3
+--------------------------------------------------
+2025-08-28 09:47:50,507 - INFO - Model Run Results with layers - 2025-08-28 09:47:50
+  File: gnn_based_pred.py
+  Accuracy: 0.71 +- 0.0
+  Confusion Matrix:    0  1  2
+0  7  1  0
+1  3  5  0
+2  2  1  5
+--------------------------------------------------

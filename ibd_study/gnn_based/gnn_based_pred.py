@@ -13,9 +13,21 @@ from ibd_study.gnn_based.meta.Ontology import Ontology
 from ibd_study.gnn_based.meta.OntologyLayer import OntologyLayer
 from ibd_study.gnn_based.seed.SeedSetter import set_all_seeds
 from ibd_study.logger import logging
+import torch
+import random
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-set_all_seeds(42)
+print(device)#5833
+seed = 42
+os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
+random.seed(seed)
+np.random.seed(seed)
+torch.manual_seed(seed)
+g = torch.Generator()
+g.manual_seed(seed)
+if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
 
 data_df = pd.read_csv("../data/transformed_df.csv")
 sample_names = data_df.pop("index")
@@ -28,39 +40,56 @@ tax_edges = pd.read_csv("../data/tax_edges.csv")
 
 X = data_df.values
 
-species_edge_index = torch.from_numpy(tax_edges.loc[:, ["index", "species"]].values.transpose()).type(torch.long).to(device)
-genus_edge_index = torch.from_numpy(tax_edges.loc[:, ["species", "genus"]].values.transpose()).type(torch.long).to(device)
-family_edge_index = torch.from_numpy(tax_edges.loc[:, ["genus", "family"]].values.transpose()).type(torch.long).to(device)
-order_edge_index = torch.from_numpy(tax_edges.loc[:, ["family", "order"]].values.transpose()).type(torch.long).to(device)
-class_edge_index = torch.from_numpy(tax_edges.loc[:, ["order", "class"]].values.transpose()).type(torch.long).to(device)
-phylum_edge_index = torch.from_numpy(tax_edges.loc[:, ["class", "phylum"]].values.transpose()).type(torch.long).to(device)
-superkingdom_edge_index = torch.from_numpy(tax_edges.loc[:, ["phylum", "superkingdom"]].values.transpose()).type(torch.long).to(device)
+ko_edges = pd.read_csv("../data/function_edges.csv")
+go_edges = pd.read_csv("../data/function_edges_go.csv")
+ko_edges["index"] = ko_edges["index"].astype(np.int64)
+go_edges["index"] = go_edges["index"].astype(np.int64)
 
-ontology_layer_species = OntologyLayer("protein", "species", data_df.values.shape[-1], species_edge_index)
-ontology_layer_genus = OntologyLayer("species", "genus", species_edge_index[-1].max()+1, genus_edge_index)
-ontology_layer_family = OntologyLayer("genus", "family", genus_edge_index[-1].max()+1, family_edge_index)
-ontology_layer_order = OntologyLayer("family", "order", family_edge_index[-1].max()+1, order_edge_index)
-ontology_layer_class = OntologyLayer("order", "class", order_edge_index[-1].max()+1, class_edge_index)
-ontology_layer_phylum = OntologyLayer("class", "phylum", class_edge_index[-1].max()+1, phylum_edge_index)
-ontology_layer_superkingdom = OntologyLayer("phylum", "superkingdom", phylum_edge_index[-1].max()+1, superkingdom_edge_index)
+ko_edge_index = torch.from_numpy(ko_edges.loc[:, ["index", "trg"]].values.transpose()).type(torch.long).to(device)
+go_edge_index = torch.from_numpy(go_edges.loc[:, ["index", "trg"]].values.transpose()).type(torch.long).to(device)
 
-tax_ontology = Ontology("Taxonomy")
-tax_ontology.add_layer(ontology_layer_species) 
-tax_ontology.add_layer(ontology_layer_genus)
-tax_ontology.add_layer(ontology_layer_family)
-tax_ontology.add_layer(ontology_layer_order)
-tax_ontology.add_layer(ontology_layer_class)
-tax_ontology.add_layer(ontology_layer_phylum)
-tax_ontology.add_layer(ontology_layer_superkingdom)
-##Average Accuracy: 0.6333 ± 0.0425 -> no early stopping tested or scaling of initial features ## TODO
-ontology_list = [tax_ontology]
+ontology_layer_ko = OntologyLayer("protein", "ko", data_df.values.shape[-1], ko_edge_index)
+ontology_layer_go = OntologyLayer("protein", "go", data_df.values.shape[-1], go_edge_index)
+
+# species_edge_index = torch.from_numpy(tax_edges.loc[:, ["index", "species"]].values.transpose()).type(torch.long).to(device)
+# genus_edge_index = torch.from_numpy(tax_edges.loc[:, ["species", "genus"]].values.transpose()).type(torch.long).to(device)
+# family_edge_index = torch.from_numpy(tax_edges.loc[:, ["genus", "family"]].values.transpose()).type(torch.long).to(device)
+# order_edge_index = torch.from_numpy(tax_edges.loc[:, ["family", "order"]].values.transpose()).type(torch.long).to(device)
+# class_edge_index = torch.from_numpy(tax_edges.loc[:, ["order", "class"]].values.transpose()).type(torch.long).to(device)
+# phylum_edge_index = torch.from_numpy(tax_edges.loc[:, ["class", "phylum"]].values.transpose()).type(torch.long).to(device)
+# superkingdom_edge_index = torch.from_numpy(tax_edges.loc[:, ["phylum", "superkingdom"]].values.transpose()).type(torch.long).to(device)
+#
+# ontology_layer_species = OntologyLayer("protein", "species", data_df.values.shape[-1], species_edge_index)
+# ontology_layer_genus = OntologyLayer("species", "genus", species_edge_index[-1].max()+1, genus_edge_index)
+# ontology_layer_family = OntologyLayer("genus", "family", genus_edge_index[-1].max()+1, family_edge_index)
+# ontology_layer_order = OntologyLayer("family", "order", family_edge_index[-1].max()+1, order_edge_index)
+# ontology_layer_class = OntologyLayer("order", "class", order_edge_index[-1].max()+1, class_edge_index)
+# ontology_layer_phylum = OntologyLayer("class", "phylum", class_edge_index[-1].max()+1, phylum_edge_index)
+# ontology_layer_superkingdom = OntologyLayer("phylum", "superkingdom", phylum_edge_index[-1].max()+1, superkingdom_edge_index)
+#
+# tax_ontology = Ontology("Taxonomy")
+# tax_ontology.add_layer(ontology_layer_species)
+# tax_ontology.add_layer(ontology_layer_genus)
+# tax_ontology.add_layer(ontology_layer_family)
+# tax_ontology.add_layer(ontology_layer_order)
+# tax_ontology.add_layer(ontology_layer_class)
+# tax_ontology.add_layer(ontology_layer_phylum)
+# tax_ontology.add_layer(ontology_layer_superkingdom)
+# ##Average Accuracy: 0.6333 ± 0.0425 -> no early stopping tested or scaling of initial features ## TODO
+# ontology_list = [tax_ontology]
+ko_ontology = Ontology("KO")
+ko_ontology.add_layer(ontology_layer_ko)
+
+go_ontology = Ontology("GO")
+go_ontology.add_layer(ontology_layer_go)
+ontology_list = [ko_ontology,go_ontology]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
-# from sklearn.preprocessing import MinMaxScaler
-# scaler = MinMaxScaler()
-# scaler.fit(X_train)
-# X_train = scaler.transform(X_train)
-# X_test = scaler.transform(X_test)
+from sklearn.preprocessing import MinMaxScaler, StandardScaler, MaxAbsScaler
+scaler = MaxAbsScaler()
+scaler.fit(X_train)
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
 
 X_train = torch.from_numpy(X_train).to(device).type(torch.float)
 X_test = torch.from_numpy(X_test).to(device).type(torch.float)
@@ -70,11 +99,12 @@ y_test = torch.from_numpy(y_test).to(device).type(torch.long)
 num_classes = torch.unique(y_train).shape[0]
 
 space = {
-    'C': hp.loguniform('C', np.log(0.001), np.log(100)),
-    'lr': hp.loguniform('lr', np.log(1e-3), np.log(1e-1)),
-    'dropout': hp.loguniform('dropout', np.log(1e-2), np.log(5e-1)),
-    "hidden_dim": hp.quniform("hidden_dim", 2, 64, q=2),
-    "num_layers": hp.quniform("num_layers", 1, len(tax_ontology), q=1)
+    'weight_decay': hp.loguniform('weight_decay', np.log(1e-6), np.log(1e-1)),
+    'lr': hp.loguniform('lr', np.log(1e-4), np.log(1e-1)),
+    'dropout': hp.uniform('dropout', 0, 8e-1),
+    "hidden_dim": hp.quniform("hidden_dim", 8, 256, q=4),
+    "num_heads": hp.choice("num_heads", [1,2, 4]),
+    "num_layers": hp.quniform("num_layers", 1, 3, q=1)
 }
 
 def get_best_params(X_train, y_train):
@@ -84,7 +114,7 @@ def get_best_params(X_train, y_train):
     """
 
     def objective(params):
-        clf = GNNModel(ontology_list, num_classes, params["lr"], params["C"], 500, params["dropout"],   hidden_dim = params["hidden_dim"], num_layers =  params["num_layers"], device=device)
+        clf = GNNModel(ontology_list, num_classes, params["lr"], params["weight_decay"], 1000, params["dropout"],   hidden_dim = params["hidden_dim"], num_layers =  params["num_layers"], num_heads = params["num_heads"], device=device)
         skf = StratifiedKFold(n_splits=3, shuffle=True, random_state=42)
         accuracy_scores = []
 
@@ -106,7 +136,8 @@ def get_best_params(X_train, y_train):
         space=space,
         algo=tpe.suggest,
         max_evals=100,
-        trials=trials
+        trials=trials,
+        rstate=np.random.default_rng(42),
     )
 
     final_best_params = space_eval(space, best_params_raw)
@@ -115,16 +146,18 @@ def get_best_params(X_train, y_train):
 best_params = get_best_params(X_train, y_train)
 print(best_params)
 # best_params = {
-#     "C": 10,
-#     "lr": 1e-2,
-#     "dropout": 0.0,
-#     "hidden_dim": 8
+#     "weight_decay": 1e-5,
+#     "lr": 1e-3,
+#     "dropout": 0.5,
+#     "hidden_dim": 512,
+#     "num_layers": 1,
+#     "num_heads": 16
 # }
 
 acc_scores = []
-for i in tqdm(range(10)):
+for i in tqdm(range(1)):
     set_all_seeds(i)
-    model = GNNModel(ontology_list, num_classes, best_params["lr"], best_params["C"], 500, best_params["dropout"], device=device, hidden_dim = best_params["hidden_dim"], num_layers =  best_params["num_layers"])
+    model = GNNModel(ontology_list, num_classes, best_params["lr"], best_params["weight_decay"], 1000, best_params["dropout"], device=device, hidden_dim = best_params["hidden_dim"], num_layers =   best_params["num_layers"], num_heads= best_params["num_heads"])
     model.fit(X_train, y_train)
     y_pred_test = model.predict(X_test)
     acc_scores.append(metrics.accuracy_score(y_test.cpu().numpy(), y_pred_test))

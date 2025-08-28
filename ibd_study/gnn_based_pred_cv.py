@@ -2,12 +2,12 @@ import pandas as pd
 import numpy as np
 import torch
 from hyperopt import hp, STATUS_OK, fmin, Trials, tpe, space_eval
-from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score
+from sklearn.model_selection import train_test_split, KFold, cross_val_score
 from sklearn import metrics
 from tqdm import tqdm
 import datetime
 import os
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, MaxAbsScaler
 
 from ibd_study.gnn_based.architecture.GNNModel import GNNModel
 from ibd_study.gnn_based.meta.Ontology import Ontology
@@ -17,53 +17,54 @@ from ibd_study.logger import logging
 
 NESTED_CV = (10, 5)
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-set_all_seeds(42)
+print(device)
 
-data_df = pd.read_csv("../data/transformed_df.csv")
+
+data_df = pd.read_csv("data/transformed_df.csv")
 sample_names = data_df.pop("index")
 y = data_df.pop("condition").values
+X = data_df.values
 print(np.unique(y, return_counts=True))
 
 proteins_over_samples_df = data_df.transpose().reset_index()
 proteins_over_samples_df["index"] = proteins_over_samples_df["index"].astype(np.int64)
-tax_edges = pd.read_csv("../data/tax_edges.csv")
-
-species_edge_index = torch.from_numpy(tax_edges.loc[:, ["index", "species"]].values.transpose()).type(torch.long).to(device)
-genus_edge_index = torch.from_numpy(tax_edges.loc[:, ["species", "genus"]].values.transpose()).type(torch.long).to(device)
-phylum_edge_index = torch.from_numpy(tax_edges.loc[:, ["genus", "phylum"]].values.transpose()).type(torch.long).to(device)
-X = data_df.values
-
-ontology_layer = OntologyLayer("protein", "species", data_df.values.shape[-1], species_edge_index)
-ontology_layer_genus = OntologyLayer("species", "genus", species_edge_index[-1].max()+1, genus_edge_index)
-ontology_layer_phylum = OntologyLayer("genus", "phylum", genus_edge_index[-1].max()+1, phylum_edge_index)
-
-tax_ontology = Ontology("Taxonomy")
-tax_ontology.add_layer(ontology_layer)
-#tax_ontology.add_layer(ontology_layer_genus)
-# tax_ontology.add_layer(ontology_layer_phylum)
-ontology_list = [tax_ontology]
 
 
-outer_cv = StratifiedKFold(n_splits=NESTED_CV[0], shuffle=True, random_state=42)
-#0.6000 ± 0.1106
+ko_edges = pd.read_csv("./data/function_edges.csv")
+go_edges = pd.read_csv("./data/function_edges_go.csv")
+ko_edges["index"] = ko_edges["index"].astype(np.int64)
+go_edges["index"] = go_edges["index"].astype(np.int64)
+
+ko_edge_index = torch.from_numpy(ko_edges.loc[:, ["index", "trg"]].values.transpose()).type(torch.long).to(device)
+go_edge_index = torch.from_numpy(go_edges.loc[:, ["index", "trg"]].values.transpose()).type(torch.long).to(device)
+
+ontology_layer_ko = OntologyLayer("protein", "ko", data_df.values.shape[-1], ko_edge_index)
+ontology_layer_go = OntologyLayer("protein", "go", data_df.values.shape[-1], go_edge_index)
+ko_ontology = Ontology("KO")
+ko_ontology.add_layer(ontology_layer_ko)
+
+go_ontology = Ontology("GO")
+go_ontology.add_layer(ontology_layer_go)
+ontology_list = [ko_ontology,go_ontology]
+
+
+outer_cv = KFold(n_splits=NESTED_CV[0], shuffle=True, random_state=42)
 fold_accuracies = []
 total_cm = None
 class_labels = np.unique(y)
 
- ##TODO Check scaler here or without early stopping
-
 print("\nStarting Nested Cross-Validation for GNN...")
 
-for fold_idx, (train_index, test_index) in enumerate(outer_cv.split(X, y), 1):
+for fold_idx, (train_index, test_index) in enumerate(outer_cv.split(X), 1):
     print(f"\n--- Processing Outer Fold {fold_idx}/{NESTED_CV[0]} ---")
 
     X_train, X_test = X[train_index], X[test_index]
     y_train, y_test = y[train_index], y[test_index]
 
-    # scaler = StandardScaler()
-    # scaler.fit(X_train)
-    # X_train = scaler.transform(X_train)
-    # X_test = scaler.transform(X_test)
+    scaler = MaxAbsScaler()
+    scaler.fit(X_train)
+    X_train = scaler.transform(X_train)
+    X_test = scaler.transform(X_test)
 
     X_train = torch.from_numpy(X_train).to(device).type(torch.float)
     X_test = torch.from_numpy(X_test).to(device).type(torch.float)
@@ -73,20 +74,21 @@ for fold_idx, (train_index, test_index) in enumerate(outer_cv.split(X, y), 1):
     num_classes = torch.unique(y_train).shape[0]
 
     space = {
-        'C': hp.loguniform('C', np.log(0.0001), np.log(100)),
-        'lr': hp.loguniform('lr', np.log(1e-3), np.log(1e-1)),
-        'dropout': hp.loguniform('dropout', np.log(1e-2), np.log(5e-1)),
-        'epochs': hp.choice('epochs', [1000]), #hp.quniform('epochs', 50, 500, 1)
-        "hidden_dim": hp.quniform("hidden_dim", 2, 64, q=2)
+        'weight_decay': hp.loguniform('weight_decay', np.log(1e-6), np.log(1e-1)),
+        'lr': hp.loguniform('lr', np.log(1e-4), np.log(1e-1)),
+        'dropout': hp.uniform('dropout', 0, 8e-1),
+        "hidden_dim": hp.quniform("hidden_dim", 8, 256, q=4),
+        "num_heads": hp.choice("num_heads", [1, 2, 4]),
+        "num_layers": hp.quniform("num_layers", 1, 3, q=1)
     }
 
     def get_best_params(X_train, y_train):
         def objective(params):
-            clf = GNNModel(ontology_list, num_classes, params["lr"], params["C"], int(params["epochs"]), params["dropout"],  hidden_dim = params["hidden_dim"], device=device)
-            skf = StratifiedKFold(n_splits=NESTED_CV[1], shuffle=True, random_state=42)
+            clf = GNNModel(ontology_list, num_classes, params["lr"], params["weight_decay"], 500, params["dropout"], device=device, hidden_dim = params["hidden_dim"], num_layers =  params["num_layers"], num_heads=params["num_heads"])
+            skf = KFold(n_splits=NESTED_CV[1], shuffle=True, random_state=42)
             accuracy_scores = []
 
-            for i, (train_index, val_index) in enumerate(skf.split(X_train.cpu(), y_train.cpu())):
+            for i, (train_index, val_index) in enumerate(skf.split(X_train.cpu())):
                 X_train_inner, X_val = X_train[train_index], X_train[val_index]
                 y_train_inner, y_val = y_train[train_index], y_train[val_index]
 
@@ -104,6 +106,7 @@ for fold_idx, (train_index, test_index) in enumerate(outer_cv.split(X, y), 1):
             space=space,
             algo=tpe.suggest,
             max_evals=100,
+            rstate=np.random.default_rng(42),
             trials=trials
         )
 
@@ -111,28 +114,19 @@ for fold_idx, (train_index, test_index) in enumerate(outer_cv.split(X, y), 1):
         return final_best_params
 
     best_params = get_best_params(X_train, y_train)
-    # best_params = {
-    #     "C": 10,
-    #     "lr": 1e-2,
-    #     "dropout": 0.0,
-    # }
-
-    acc_scores = []
-    # for i in tqdm(range(10)):
-    #     set_all_seeds(i)
     print(best_params) ##Check mean aggr
-    model = GNNModel(ontology_list, num_classes, best_params["lr"], best_params["C"], int(best_params["epochs"]), best_params["dropout"], hidden_dim = best_params["hidden_dim"], device=device) # C= 10, lr = 1e-2, dropout = 0, epochs, 500
+    model = GNNModel(ontology_list, num_classes, best_params["lr"], best_params["weight_decay"], 500, best_params["dropout"], device=device, hidden_dim = best_params["hidden_dim"], num_layers =  best_params["num_layers"], num_heads=best_params["num_heads"])
     model.fit(X_train, y_train)
     y_pred_test = model.predict(X_test)
-    acc_scores.append(metrics.accuracy_score(y_test.cpu().numpy(), y_pred_test))
-    mean_acc = np.mean(acc_scores)
-    std_acc = np.std(acc_scores)
-    print(f"Accuracy: {mean_acc} +- {std_acc}")
-    fold_accuracies.append(mean_acc)
+    acc = metrics.accuracy_score(y_test.cpu().numpy(), y_pred_test)
+
+    print(f"Accuracy: {acc}")
+    fold_accuracies.append(acc)
     log_message = (
         f"Model Run Results - {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
         f"  File: {os.path.basename(__file__)} (Fold: {fold_idx} / {NESTED_CV[0]})\n"
-        f"  Accuracy: {mean_acc:.4f} ± {std_acc:.4f}\n"
+        f"  Accuracy: {acc:.4f}\n"
+        f" Best params: {best_params}\n"
         f"--------------------------------------------------"
     )
     logging.info(log_message)
@@ -149,7 +143,5 @@ log_message = (
 )
 logging.info(log_message)
 
- ##TODO Make separate project -> Push on github -> Pull on a server -> Epochs as hyperparam -> Aggr as hyperparam -> Num layers as hyperparam -> More iterations -> Run there
- ## CHeck if outer loop is overfitting and if some early stopping would help
- ## If not wrking -> Extend idea with Knowledge based on protein similarity attached as infromation (name and taxa embeddings)
+ ## Ideas for improvements: Aggr as hyperparam; Knowledge based on protein similarity attached as information (name and taxa embeddings)
 

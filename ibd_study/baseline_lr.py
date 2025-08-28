@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split, cross_val_score, StratifiedKFold
+from sklearn.model_selection import train_test_split, cross_val_score, KFold
 from sklearn.preprocessing import StandardScaler
 from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
@@ -49,7 +49,7 @@ def get_best_params(X_train, y_train):
             params.pop('l1_ratio', None)
 
         clf = LogisticRegression(**params, random_state=42, max_iter=1000)  # Increased max_iter for saga solver
-        skf = StratifiedKFold(n_splits=3, shuffle=True, random_state=42)  # Using 3 splits for CV
+        skf = KFold(n_splits=3, shuffle=True, random_state=42)  # Using 3 splits for CV
 
         # Use scaled data for cross-validation
         acc = np.mean(cross_val_score(clf, X_train, y_train, cv=skf, scoring='accuracy', n_jobs=-1))
@@ -98,8 +98,8 @@ df_cm = pd.DataFrame(cm, index=class_labels, columns=class_labels)
 print("\nConfusion Matrix:")
 print(df_cm)
 log_message = (
-    f"Model Run Results - {current_date}\n"
-    f"  File: {file_name}\n"
+    f"Model Run Results - {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+    f"  File: {os.path.basename(__file__)}\n"
     f"  Accuracy: {accuracy_score:.2f}\n"
     f"  Confusion Matrix: {df_cm}\n"
     f"--------------------------------------------------"

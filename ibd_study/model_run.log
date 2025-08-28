@@ -86,3 +86,784 @@
 1  11  26   5
 2   6   1  31
 --------------------------------------------------
+2025-08-26 10:50:55,406 - INFO - Model Run Results - 2025-08-26 10:50:55
+  File: aggr_based_pred.py
+  Accuracy: 0.50
+  Confusion Matrix:    0  1  2
+0  2  4  2
+1  2  5  1
+2  3  0  5
+--------------------------------------------------
+2025-08-26 10:52:17,123 - INFO - Model Run Results - 2025-08-26 10:52:17
+  File: aggr_based_pred.py
+  Accuracy: 0.58
+  Confusion Matrix:    0  1  2
+0  2  5  1
+1  1  7  0
+2  3  0  5
+--------------------------------------------------
+2025-08-26 10:53:13,293 - INFO - Model Run Results - 2025-08-26 10:53:13
+  File: aggr_based_pred.py
+  Accuracy: 0.54
+  Confusion Matrix:    0  1  2
+0  3  4  1
+1  2  5  1
+2  3  0  5
+--------------------------------------------------
+2025-08-26 10:56:14,050 - INFO - Model Run Results - 2025-08-26 10:56:14
+  File: aggr_based_pred.py
+  Accuracy: 0.58
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  2  5  1
+2  2  1  5
+--------------------------------------------------
+2025-08-26 11:59:44,857 - INFO - Model Run Results - 2025-08-26 11:59:44
+  File: aggr_based_pred.py
+  Accuracy: 0.71
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  2  6  0
+2  2  0  6
+--------------------------------------------------
+2025-08-26 12:00:54,712 - INFO - Model Run Results - 2025-08-26 12:00:54
+  File: aggr_based_pred.py
+  Accuracy: 0.71
+  Confusion Matrix:    0  1  2
+0  6  1  1
+1  3  5  0
+2  2  0  6
+--------------------------------------------------
+2025-08-26 13:20:31,506 - INFO - Model Run Results - 2025-08-26 13:20:31
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-26 13:22:42,306 - INFO - Model Run Results - 2025-08-26 13:22:42
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-26 13:25:10,117 - INFO - Model Run Results - 2025-08-26 13:25:10
+  File: aggregation_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-26 13:27:15,391 - INFO - Model Run Results - 2025-08-26 13:27:15
+  File: aggregation_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-26 13:29:18,092 - INFO - Model Run Results - 2025-08-26 13:29:18
+  File: aggregation_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 13:30:21,712 - INFO - Model Run Results - 2025-08-26 13:30:21
+  File: aggregation_rf_cv.py (Fold: 6 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-26 13:31:40,106 - INFO - Model Run Results - 2025-08-26 13:31:40
+  File: aggregation_rf_cv.py (Fold: 7 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 13:32:57,170 - INFO - Model Run Results - 2025-08-26 13:32:57
+  File: aggregation_rf_cv.py (Fold: 8 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-26 13:34:38,257 - INFO - Model Run Results - 2025-08-26 13:34:38
+  File: aggregation_rf_cv.py (Fold: 9 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 13:36:21,322 - INFO - Model Run Results - 2025-08-26 13:36:21
+  File: aggregation_rf_cv.py (Fold: 10 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 13:36:21,327 - INFO - Model Run Results - 2025-08-26 13:36:21
+  File: aggregation_rf_cv.py
+  Accuracy: 0.6667ï¿½ 0.0913
+  Confusion Matrix:     0   1   2
+0  23   8   9
+1  12  25   5
+2   5   1  32
+--------------------------------------------------
+
+2025-08-26 13:43:39,431 - INFO - Model Run Results - 2025-08-26 13:43:39
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-26 13:44:54,410 - INFO - Model Run Results - 2025-08-26 13:44:54
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-26 13:47:51,414 - INFO - Model Run Results - 2025-08-26 13:47:51
+  File: aggregation_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-26 13:50:02,206 - INFO - Model Run Results - 2025-08-26 13:50:02
+  File: aggregation_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.9167
+--------------------------------------------------
+2025-08-26 13:51:30,945 - INFO - Model Run Results - 2025-08-26 13:51:30
+  File: aggregation_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 13:52:42,631 - INFO - Model Run Results - 2025-08-26 13:52:42
+  File: aggregation_rf_cv.py (Fold: 6 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 13:53:49,552 - INFO - Model Run Results - 2025-08-26 13:53:49
+  File: aggregation_rf_cv.py (Fold: 7 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 13:55:18,000 - INFO - Model Run Results - 2025-08-26 13:55:18
+  File: aggregation_rf_cv.py (Fold: 8 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-26 13:56:55,765 - INFO - Model Run Results - 2025-08-26 13:56:55
+  File: aggregation_rf_cv.py (Fold: 9 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 13:58:29,807 - INFO - Model Run Results - 2025-08-26 13:58:29
+  File: aggregation_rf_cv.py (Fold: 10 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 13:58:29,810 - INFO - Model Run Results - 2025-08-26 13:58:29
+  File: aggregation_rf_cv.py
+  Accuracy: 0.6917ï¿½ 0.0917
+  Confusion Matrix:     0   1   2
+0  24   7   9
+1  13  25   4
+2   3   1  34
+--------------------------------------------------
+2025-08-26 14:54:23,134 - INFO - Model Run Results - 2025-08-26 14:54:23
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 14:56:18,111 - INFO - Model Run Results - 2025-08-26 14:56:18
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-26 14:57:50,658 - INFO - Model Run Results - 2025-08-26 14:57:50
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-26 14:59:40,417 - INFO - Model Run Results - 2025-08-26 14:59:40
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-26 15:04:37,899 - INFO - Model Run Results - 2025-08-26 15:04:37
+  File: aggregation_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-26 15:05:53,309 - INFO - Model Run Results - 2025-08-26 15:05:53
+  File: aggregation_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-26 15:07:14,330 - INFO - Model Run Results - 2025-08-26 15:07:14
+  File: aggregation_rf_cv.py (Fold: 6 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-26 15:09:08,246 - INFO - Model Run Results - 2025-08-26 15:09:08
+  File: aggregation_rf_cv.py (Fold: 7 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 15:10:07,698 - INFO - Model Run Results - 2025-08-26 15:10:07
+  File: baseline_rf.py
+  Accuracy: 0.62
+  Confusion Matrix:    0  1  2
+0  4  3  1
+1  3  5  0
+2  2  0  6
+--------------------------------------------------
+2025-08-26 15:15:12,127 - INFO - Model Run Results - 2025-08-26 15:15:12
+  File: baseline_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 15:16:12,356 - INFO - Model Run Results - 2025-08-26 15:16:12
+  File: baseline_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-26 15:17:39,149 - INFO - Model Run Results - 2025-08-26 15:17:39
+  File: baseline_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 15:19:44,360 - INFO - Model Run Results - 2025-08-26 15:19:44
+  File: baseline_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-26 15:20:40,554 - INFO - Model Run Results - 2025-08-26 15:20:40
+  File: baseline_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-26 15:21:29,201 - INFO - Model Run Results - 2025-08-26 15:21:29
+  File: baseline_rf_cv.py (Fold: 6 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-26 15:22:38,684 - INFO - Model Run Results - 2025-08-26 15:22:38
+  File: baseline_rf_cv.py (Fold: 7 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 15:23:26,550 - INFO - Model Run Results - 2025-08-26 15:23:26
+  File: baseline_rf_cv.py (Fold: 8 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-26 15:24:14,311 - INFO - Model Run Results - 2025-08-26 15:24:14
+  File: baseline_rf_cv.py (Fold: 9 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-26 15:25:20,091 - INFO - Model Run Results - 2025-08-26 15:25:20
+  File: baseline_rf_cv.py (Fold: 10 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-26 15:25:20,095 - INFO - Model Run Results - 2025-08-26 15:25:20
+  File: baseline_rf_cv.py
+  Accuracy: 0.6833ï¿½ 0.0898
+  Confusion Matrix:     0   1   2
+0  26   8   6
+1  10  26   6
+2   7   1  30
+2025-08-27 08:05:24,284 - INFO - Model Run Results - 2025-08-27 08:05:24
+  File: aggr_based_pred.py
+  Accuracy: 0.67
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  1  6  1
+2  3  0  5
+--------------------------------------------------
+2025-08-27 08:09:41,572 - INFO - Model Run Results - 2025-08-27 08:09:41
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 08:13:40,578 - INFO - Model Run Results - 2025-08-27 08:13:40
+  File: aggr_based_pred.py
+  Accuracy: 0.67
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  1  6  1
+2  3  0  5
+--------------------------------------------------
+2025-08-27 08:19:41,738 - INFO - Model Run Results - 2025-08-27 08:19:41
+  File: aggr_based_pred.py
+  Accuracy: 0.67
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  1  6  1
+2  3  0  5
+--------------------------------------------------
+2025-08-27 08:22:11,780 - INFO - Model Run Results - 2025-08-27 08:22:11
+  File: aggr_based_pred.py
+  Accuracy: 0.71
+  Confusion Matrix:    0  1  2
+0  5  2  1
+1  2  6  0
+2  2  0  6
+--------------------------------------------------
+2025-08-27 08:27:27,596 - INFO - Model Run Results - 2025-08-27 08:27:27
+  File: aggr_based_pred.py
+  Accuracy: 0.71
+  Confusion Matrix:    0  1  2
+0  6  1  1
+1  3  5  0
+2  2  0  6
+--------------------------------------------------
+2025-08-27 08:31:59,210 - INFO - Model Run Results - 2025-08-27 08:31:59
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 08:33:45,410 - INFO - Model Run Results - 2025-08-27 08:33:45
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 08:35:53,104 - INFO - Model Run Results - 2025-08-27 08:35:53
+  File: aggregation_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 08:37:47,641 - INFO - Model Run Results - 2025-08-27 08:37:47
+  File: aggregation_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.9167
+--------------------------------------------------
+2025-08-27 08:40:51,656 - INFO - Model Run Results - 2025-08-27 08:40:51
+  File: aggregation_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 08:42:05,465 - INFO - Model Run Results - 2025-08-27 08:42:05
+  File: aggregation_rf_cv.py (Fold: 6 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 08:43:05,860 - INFO - Model Run Results - 2025-08-27 08:43:05
+  File: aggregation_rf_cv.py (Fold: 7 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 08:44:01,788 - INFO - Model Run Results - 2025-08-27 08:44:01
+  File: aggregation_rf_cv.py (Fold: 8 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 08:45:54,616 - INFO - Model Run Results - 2025-08-27 08:45:54
+  File: aggregation_rf_cv.py (Fold: 9 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 08:48:00,877 - INFO - Model Run Results - 2025-08-27 08:48:00
+  File: aggregation_rf_cv.py (Fold: 10 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 08:48:00,881 - INFO - Model Run Results - 2025-08-27 08:48:00
+  File: aggregation_rf_cv.py
+  Accuracy: 0.6750ï¿½ 0.1205
+  Confusion Matrix:     0   1   2
+0  22   9   9
+1  13  25   4
+2   4   0  34
+--------------------------------------------------
+2025-08-27 08:51:04,269 - INFO - Model Run Results - 2025-08-27 08:51:04
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 08:52:25,416 - INFO - Model Run Results - 2025-08-27 08:52:25
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 08:56:41,934 - INFO - Model Run Results - 2025-08-27 08:56:41
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 08:58:20,059 - INFO - Model Run Results - 2025-08-27 08:58:20
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 09:01:15,924 - INFO - Model Run Results - 2025-08-27 09:01:15
+  File: aggregation_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 09:04:35,601 - INFO - Model Run Results - 2025-08-27 09:04:35
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 09:06:58,438 - INFO - Model Run Results - 2025-08-27 09:06:58
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 09:10:13,270 - INFO - Model Run Results - 2025-08-27 09:10:13
+  File: aggregation_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 09:15:05,246 - INFO - Model Run Results - 2025-08-27 09:15:05
+  File: aggregation_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 09:16:53,111 - INFO - Model Run Results - 2025-08-27 09:16:53
+  File: aggregation_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 09:18:53,376 - INFO - Model Run Results - 2025-08-27 09:18:53
+  File: aggregation_rf_cv.py (Fold: 6 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 09:20:32,299 - INFO - Model Run Results - 2025-08-27 09:20:32
+  File: aggregation_rf_cv.py (Fold: 7 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 09:22:03,535 - INFO - Model Run Results - 2025-08-27 09:22:03
+  File: aggregation_rf_cv.py (Fold: 8 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 09:25:27,460 - INFO - Model Run Results - 2025-08-27 09:25:27
+  File: aggregation_rf_cv.py (Fold: 9 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 09:28:34,691 - INFO - Model Run Results - 2025-08-27 09:28:34
+  File: aggregation_rf_cv.py (Fold: 10 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 09:28:34,694 - INFO - Model Run Results - 2025-08-27 09:28:34
+  File: aggregation_rf_cv.py
+  Accuracy: 0.6500ï¿½ 0.1041
+  Confusion Matrix:     0   1   2
+0  21  10   9
+1  13  25   4
+2   5   1  32
+--------------------------------------------------
+2025-08-27 09:35:47,405 - INFO - Model Run Results - 2025-08-27 09:35:47
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 09:39:45,920 - INFO - Model Run Results - 2025-08-27 09:39:45
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 09:46:01,463 - INFO - Model Run Results - 2025-08-27 09:46:01
+  File: aggregation_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 09:49:16,377 - INFO - Model Run Results - 2025-08-27 09:49:16
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 09:50:09,968 - INFO - Model Run Results - 2025-08-27 09:50:09
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 09:51:48,040 - INFO - Model Run Results - 2025-08-27 09:51:48
+  File: aggregation_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 09:53:04,033 - INFO - Model Run Results - 2025-08-27 09:53:04
+  File: aggregation_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 09:53:38,792 - INFO - Model Run Results - 2025-08-27 09:53:38
+  File: aggregation_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 09:56:01,632 - INFO - Model Run Results - 2025-08-27 09:56:01
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 09:56:59,077 - INFO - Model Run Results - 2025-08-27 09:56:59
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.4167
+--------------------------------------------------
+2025-08-27 09:58:02,743 - INFO - Model Run Results - 2025-08-27 09:58:02
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 09:59:30,913 - INFO - Model Run Results - 2025-08-27 09:59:30
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 10:00:51,615 - INFO - Model Run Results - 2025-08-27 10:00:51
+  File: aggregation_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 10:02:00,310 - INFO - Model Run Results - 2025-08-27 10:02:00
+  File: aggregation_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 10:03:16,867 - INFO - Model Run Results - 2025-08-27 10:03:16
+  File: aggregation_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 10:04:27,670 - INFO - Model Run Results - 2025-08-27 10:04:27
+  File: aggregation_rf_cv.py (Fold: 6 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 10:05:53,913 - INFO - Model Run Results - 2025-08-27 10:05:53
+  File: aggregation_rf_cv.py (Fold: 7 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 10:06:57,872 - INFO - Model Run Results - 2025-08-27 10:06:57
+  File: aggregation_rf_cv.py (Fold: 8 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 10:08:49,121 - INFO - Model Run Results - 2025-08-27 10:08:49
+  File: aggregation_rf_cv.py (Fold: 9 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 10:10:32,352 - INFO - Model Run Results - 2025-08-27 10:10:32
+  File: aggregation_rf_cv.py (Fold: 10 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 10:10:32,355 - INFO - Model Run Results - 2025-08-27 10:10:32
+  File: aggregation_rf_cv.py
+  Accuracy: 0.7000ï¿½ 0.1000
+  Confusion Matrix:     0   1   2
+0  27   8   5
+1  10  27   5
+2   7   1  30
+--------------------------------------------------
+2025-08-27 10:12:24,319 - INFO - Model Run Results - 2025-08-27 10:12:24
+  File: baseline_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.9167
+--------------------------------------------------
+2025-08-27 10:13:36,743 - INFO - Model Run Results - 2025-08-27 10:13:36
+  File: baseline_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 10:14:50,067 - INFO - Model Run Results - 2025-08-27 10:14:50
+  File: baseline_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 10:15:58,925 - INFO - Model Run Results - 2025-08-27 10:15:58
+  File: baseline_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 10:17:12,680 - INFO - Model Run Results - 2025-08-27 10:17:12
+  File: baseline_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 10:18:28,191 - INFO - Model Run Results - 2025-08-27 10:18:28
+  File: baseline_rf_cv.py (Fold: 6 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 10:19:41,406 - INFO - Model Run Results - 2025-08-27 10:19:41
+  File: baseline_rf_cv.py (Fold: 7 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 10:21:25,747 - INFO - Model Run Results - 2025-08-27 10:21:25
+  File: baseline_rf_cv.py (Fold: 8 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 10:22:48,956 - INFO - Model Run Results - 2025-08-27 10:22:48
+  File: baseline_rf_cv.py (Fold: 9 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 10:24:27,043 - INFO - Model Run Results - 2025-08-27 10:24:27
+  File: baseline_rf_cv.py (Fold: 10 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 10:24:27,047 - INFO - Model Run Results - 2025-08-27 10:24:27
+  File: baseline_rf_cv.py
+  Accuracy: 0.6667ï¿½ 0.1291
+  Confusion Matrix:     0   1   2
+0  25   8   7
+1  12  24   6
+2   6   1  31
+--------------------------------------------------
+2025-08-27 10:28:11,480 - INFO - Model Run Results - 2025-08-27 10:28:11
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 10:29:55,694 - INFO - Model Run Results - 2025-08-27 10:29:55
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 10:31:32,868 - INFO - Model Run Results - 2025-08-27 10:31:32
+  File: aggregation_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 10:33:01,242 - INFO - Model Run Results - 2025-08-27 10:33:01
+  File: aggregation_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 10:34:25,671 - INFO - Model Run Results - 2025-08-27 10:34:25
+  File: aggregation_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 10:35:42,918 - INFO - Model Run Results - 2025-08-27 10:35:42
+  File: aggregation_rf_cv.py (Fold: 6 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 10:36:49,318 - INFO - Model Run Results - 2025-08-27 10:36:49
+  File: aggregation_rf_cv.py (Fold: 7 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 10:38:00,583 - INFO - Model Run Results - 2025-08-27 10:38:00
+  File: aggregation_rf_cv.py (Fold: 8 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 10:39:50,448 - INFO - Model Run Results - 2025-08-27 10:39:50
+  File: aggregation_rf_cv.py (Fold: 9 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 10:41:27,823 - INFO - Model Run Results - 2025-08-27 10:41:27
+  File: aggregation_rf_cv.py (Fold: 10 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 10:41:27,826 - INFO - Model Run Results - 2025-08-27 10:41:27
+  File: aggregation_rf_cv.py
+  Accuracy: 0.6750ï¿½ 0.1083
+  Confusion Matrix:     0   1   2
+0  27   7   6
+1  11  24   7
+2   7   1  30
+--------------------------------------------------
+2025-08-27 10:44:57,241 - INFO - Model Run Results - 2025-08-27 10:44:57
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 10:49:45,332 - INFO - Model Run Results - 2025-08-27 10:49:45
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 10:52:06,014 - INFO - Model Run Results - 2025-08-27 10:52:06
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 10:53:41,853 - INFO - Model Run Results - 2025-08-27 10:53:41
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 10:55:01,638 - INFO - Model Run Results - 2025-08-27 10:55:01
+  File: aggregation_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 10:56:30,418 - INFO - Model Run Results - 2025-08-27 10:56:30
+  File: aggregation_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 10:57:54,982 - INFO - Model Run Results - 2025-08-27 10:57:54
+  File: aggregation_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 10:59:26,315 - INFO - Model Run Results - 2025-08-27 10:59:26
+  File: aggregation_rf_cv.py (Fold: 6 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 11:00:53,911 - INFO - Model Run Results - 2025-08-27 11:00:53
+  File: aggregation_rf_cv.py (Fold: 7 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 11:01:56,546 - INFO - Model Run Results - 2025-08-27 11:01:56
+  File: aggregation_rf_cv.py (Fold: 8 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 11:03:36,997 - INFO - Model Run Results - 2025-08-27 11:03:36
+  File: aggregation_rf_cv.py (Fold: 9 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 11:05:01,568 - INFO - Model Run Results - 2025-08-27 11:05:01
+  File: aggregation_rf_cv.py (Fold: 10 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 11:05:01,572 - INFO - Model Run Results - 2025-08-27 11:05:01
+  File: aggregation_rf_cv.py
+  Accuracy: 0.7083ï¿½ 0.1070
+  Confusion Matrix:     0   1   2
+0  27   7   6
+1  10  27   5
+2   7   0  31
+--------------------------------------------------
+2025-08-27 11:11:56,537 - INFO - Model Run Results - 2025-08-27 11:11:56
+  File: baseline_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 11:12:59,078 - INFO - Model Run Results - 2025-08-27 11:12:59
+  File: baseline_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 11:14:11,554 - INFO - Model Run Results - 2025-08-27 11:14:11
+  File: baseline_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 11:15:17,724 - INFO - Model Run Results - 2025-08-27 11:15:17
+  File: baseline_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 11:16:31,264 - INFO - Model Run Results - 2025-08-27 11:16:31
+  File: baseline_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 11:17:34,306 - INFO - Model Run Results - 2025-08-27 11:17:34
+  File: baseline_rf_cv.py (Fold: 6 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 11:18:45,643 - INFO - Model Run Results - 2025-08-27 11:18:45
+  File: baseline_rf_cv.py (Fold: 7 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 11:20:05,739 - INFO - Model Run Results - 2025-08-27 11:20:05
+  File: baseline_rf_cv.py (Fold: 8 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 11:21:28,497 - INFO - Model Run Results - 2025-08-27 11:21:28
+  File: baseline_rf_cv.py (Fold: 9 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 11:22:47,540 - INFO - Model Run Results - 2025-08-27 11:22:47
+  File: baseline_rf_cv.py (Fold: 10 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 11:22:47,544 - INFO - Model Run Results - 2025-08-27 11:22:47
+  File: baseline_rf_cv.py
+  Accuracy: 0.6583ï¿½ 0.1205
+  Confusion Matrix:     0   1   2
+0  25   8   7
+1  12  24   6
+2   8   0  30
+--------------------------------------------------
+2025-08-27 14:41:14,606 - INFO - Model Run Results - 2025-08-27 14:41:14
+  File: baseline_lr_cv.py (Fold: 1 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-27 14:44:28,754 - INFO - Model Run Results - 2025-08-27 14:44:28
+  File: baseline_lr_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-27 14:47:40,999 - INFO - Model Run Results - 2025-08-27 14:47:40
+  File: baseline_lr_cv.py (Fold: 3 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 14:50:20,133 - INFO - Model Run Results - 2025-08-27 14:50:20
+  File: baseline_lr_cv.py (Fold: 4 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 14:53:38,062 - INFO - Model Run Results - 2025-08-27 14:53:38
+  File: baseline_lr_cv.py (Fold: 5 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 14:57:10,741 - INFO - Model Run Results - 2025-08-27 14:57:10
+  File: baseline_lr_cv.py (Fold: 6 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 15:01:45,306 - INFO - Model Run Results - 2025-08-27 15:01:45
+  File: baseline_lr_cv.py (Fold: 7 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-27 15:04:57,376 - INFO - Model Run Results - 2025-08-27 15:04:57
+  File: baseline_lr_cv.py (Fold: 8 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-27 15:08:20,152 - INFO - Model Run Results - 2025-08-27 15:08:20
+  File: baseline_lr_cv.py (Fold: 9 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-27 15:13:05,503 - INFO - Model Run Results - 2025-08-27 15:13:05
+  File: baseline_lr_cv.py (Fold: 10 / 10)
+  Accuracy: 0.9167
+--------------------------------------------------
+2025-08-27 15:13:05,508 - INFO - Model Run Results - 2025-08-27 15:13:05
+  File: baseline_lr_cv.py
+  Accuracy: 0.6667ï¿½ 0.1394
+  Confusion Matrix:     0   1   2
+0  24   8   8
+1  11  24   7
+2   4   2  32
+
+2025-08-28 06:10:58,558 - INFO - Model Run Results - 2025-08-28 06:10:58
+  File: aggregation_rf_cv.py (Fold: 1 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-28 06:12:36,729 - INFO - Model Run Results - 2025-08-28 06:12:36
+  File: aggregation_rf_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5000
+--------------------------------------------------
+2025-08-28 06:13:56,868 - INFO - Model Run Results - 2025-08-28 06:13:56
+  File: aggregation_rf_cv.py (Fold: 3 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-28 06:15:20,897 - INFO - Model Run Results - 2025-08-28 06:15:20
+  File: aggregation_rf_cv.py (Fold: 4 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-28 06:16:42,245 - INFO - Model Run Results - 2025-08-28 06:16:42
+  File: aggregation_rf_cv.py (Fold: 5 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-28 06:18:13,933 - INFO - Model Run Results - 2025-08-28 06:18:13
+  File: aggregation_rf_cv.py (Fold: 6 / 10)
+  Accuracy: 0.6667
+--------------------------------------------------
+2025-08-28 06:19:41,019 - INFO - Model Run Results - 2025-08-28 06:19:41
+  File: aggregation_rf_cv.py (Fold: 7 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-28 06:20:41,763 - INFO - Model Run Results - 2025-08-28 06:20:41
+  File: aggregation_rf_cv.py (Fold: 8 / 10)
+  Accuracy: 0.5833
+--------------------------------------------------
+2025-08-28 06:22:19,822 - INFO - Model Run Results - 2025-08-28 06:22:19
+  File: aggregation_rf_cv.py (Fold: 9 / 10)
+  Accuracy: 0.7500
+--------------------------------------------------
+2025-08-28 06:23:34,810 - INFO - Model Run Results - 2025-08-28 06:23:34
+  File: aggregation_rf_cv.py (Fold: 10 / 10)
+  Accuracy: 0.8333
+--------------------------------------------------
+2025-08-28 06:23:34,813 - INFO - Model Run Results - 2025-08-28 06:23:34
+  File: aggregation_rf_cv.py
+  Accuracy: 0.7083± 0.1070
+  Confusion Matrix:     0   1   2
+0  27   7   6
+1  10  27   5
+2   7   0  31
+--------------------------------------------------
+2025-08-28 10:53:56,326 - INFO - Model Run Results - 2025-08-28 10:53:56
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.8333
+ Best params: {'dropout': 0.2381149602762324, 'hidden_dim': 252.0, 'lr': 0.0002538408428163804, 'num_heads': 4, 'num_layers': 2.0, 'weight_decay': 0.003750335696100594}
+--------------------------------------------------

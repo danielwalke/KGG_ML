@@ -1,20 +1,39 @@
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import KFold, cross_val_score
+from sklearn.model_selection import StratifiedKFold, cross_val_score, KFold
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import metrics
 from hyperopt import fmin, tpe, hp, STATUS_OK, Trials, space_eval
 import datetime
 import os
-from logger import logging
+from ibd_study.logger import logging
 
+
+##TODO check aggregation based on MPA PAthway Tool mapping
 NESTED_CV = (10, 5)
+random_state = 42
 # Load and prepare the data
 data_df = pd.read_csv("data/transformed_df.csv")
 sample_names = data_df.pop("index")
 y = data_df.pop("condition")
-X = data_df.values
+print(np.unique(y, return_counts=True))
 
+proteins_over_samples_df = data_df.transpose().reset_index()
+proteins_over_samples_df["index"] = proteins_over_samples_df["index"].astype(np.int64)
+#tax_edges = pd.read_csv("data/tax_edges.csv")
+
+ko_edges = pd.read_csv("data/function_edges.csv")
+go_edges = pd.read_csv("data/function_edges_go.csv")
+ko_edges["index"] = ko_edges["index"].astype(np.int64)
+go_edges["index"] = go_edges["index"].astype(np.int64)
+
+merged_proteins_over_sampled_df_ko = pd.merge(ko_edges, proteins_over_samples_df, on="index")
+merged_proteins_over_sampled_df_go = pd.merge(go_edges, proteins_over_samples_df, on="index")
+ko_level_features = merged_proteins_over_sampled_df_ko.groupby("trg").apply(np.sum, include_groups=False, axis = 0).transpose().iloc[1:].values
+go_level_features = merged_proteins_over_sampled_df_go.groupby("trg").apply(np.sum, include_groups=False, axis = 0).transpose().iloc[1:].values
+print(ko_level_features.shape)
+print(go_level_features.shape)
+X = np.hstack((ko_level_features, go_level_features))
 print("Class distribution in the full dataset:")
 print(np.unique(y, return_counts=True))
 
@@ -50,11 +69,11 @@ def get_best_params(X_train_inner, y_train_inner):
             if params.get(param_name) is not None:
                 params[param_name] = int(params[param_name])
 
-        clf = RandomForestClassifier(**params, random_state=42, n_jobs=3)
+        clf = RandomForestClassifier(**params, random_state=random_state, n_jobs=3)
         # Inner CV for hyperparameter tuning
-        skf = KFold(n_splits=NESTED_CV[1], shuffle=True, random_state=42)
+        kf = KFold(n_splits=NESTED_CV[1], shuffle=True, random_state=random_state)
 
-        acc = np.mean(cross_val_score(clf, X_train_inner, y_train_inner, cv=skf, scoring='accuracy', n_jobs=-1))
+        acc = np.mean(cross_val_score(clf, X_train_inner, y_train_inner, cv=kf, scoring='accuracy', n_jobs=-1))
 
         # Hyperopt minimizes the loss, so we return negative accuracy
         return {'loss': -acc, 'status': STATUS_OK}
@@ -83,7 +102,7 @@ def get_best_params(X_train_inner, y_train_inner):
 # --- Nested Cross-Validation ---
 
 # 1. Outer Loop for Model Evaluation
-outer_cv = KFold(n_splits=NESTED_CV[0], shuffle=True, random_state=42)
+outer_cv = KFold(n_splits=NESTED_CV[0], shuffle=True, random_state=random_state)
 
 fold_accuracies = []
 total_cm = None
@@ -104,7 +123,7 @@ for fold_idx, (train_index, test_index) in enumerate(outer_cv.split(X), 1):
     print(f"Best parameters for fold {fold_idx}: {best_params_for_fold}")
 
     # 3. Train model with best params on the outer training data
-    model = RandomForestClassifier(**best_params_for_fold, random_state=42)
+    model = RandomForestClassifier(**best_params_for_fold, random_state=random_state)
     model.fit(X_train, y_train)
 
     # 4. Evaluate on the outer test data

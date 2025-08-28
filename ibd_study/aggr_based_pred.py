@@ -16,15 +16,21 @@ print(np.unique(y, return_counts=True))
 
 proteins_over_samples_df = data_df.transpose().reset_index()
 proteins_over_samples_df["index"] = proteins_over_samples_df["index"].astype(np.int64)
-tax_edges = pd.read_csv("data/tax_edges.csv")
+ko_edges = pd.read_csv("data/function_edges.csv")
+go_edges = pd.read_csv("data/function_edges_go.csv")
+#pd.read_csv("data/tax_edges.csv")
+#tax_edges = pd.read_csv("data/tax_edges.csv")
 
-merged_proteins_over_sampled_df = pd.merge(tax_edges, proteins_over_samples_df, on="index")
-
-order_level_features = merged_proteins_over_sampled_df.groupby("order").apply(np.mean, include_groups=False, axis = 0).transpose().iloc[7:]
-phylum_level_features = merged_proteins_over_sampled_df.groupby("phylum").apply(np.mean, include_groups=False, axis = 0).transpose().iloc[7:]
-genus_level_features = merged_proteins_over_sampled_df.groupby("genus").apply(np.mean, include_groups=False, axis = 0).transpose().iloc[7:]
-species_level_features = merged_proteins_over_sampled_df.groupby("species").apply(np.mean, include_groups=False, axis = 0).transpose().iloc[7:]
-X = np.hstack((phylum_level_features, genus_level_features, species_level_features))
+merged_proteins_over_sampled_df_ko = pd.merge(ko_edges, proteins_over_samples_df, on="index")
+merged_proteins_over_sampled_df_go = pd.merge(go_edges, proteins_over_samples_df, on="index")
+# order_level_features = merged_proteins_over_sampled_df.groupby("order").apply(np.mean, include_groups=False, axis = 0).transpose().iloc[7:]
+# phylum_level_features = merged_proteins_over_sampled_df.groupby("phylum").apply(np.mean, include_groups=False, axis = 0).transpose().iloc[7:]
+# genus_level_features = merged_proteins_over_sampled_df.groupby("genus").apply(np.mean, include_groups=False, axis = 0).transpose().iloc[7:]
+ko_level_features = merged_proteins_over_sampled_df_ko.groupby("trg").apply(np.sum, include_groups=False, axis = 0).transpose().iloc[1:].values #species [7:]
+go_level_features = merged_proteins_over_sampled_df_go.groupby("trg").apply(np.sum, include_groups=False, axis = 0).transpose().iloc[1:].values
+print(ko_level_features.shape)
+print(go_level_features.shape)
+X = np.hstack((ko_level_features, go_level_features))
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
 
