@@ -19,8 +19,8 @@ NESTED_CV = (10, 5)
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(device)
 
-
-data_df = pd.read_csv("data/transformed_df.csv")
+here = os.path.dirname(__file__)
+data_df = pd.read_csv(f"{here}/data/transformed_df.csv")
 sample_names = data_df.pop("index")
 y = data_df.pop("condition").values
 X = data_df.values
@@ -30,8 +30,8 @@ proteins_over_samples_df = data_df.transpose().reset_index()
 proteins_over_samples_df["index"] = proteins_over_samples_df["index"].astype(np.int64)
 
 
-ko_edges = pd.read_csv("./data/function_edges.csv")
-go_edges = pd.read_csv("./data/function_edges_go.csv")
+ko_edges = pd.read_csv(f"{here}/data/function_edges.csv")
+go_edges = pd.read_csv(f"{here}/data/function_edges_go.csv")
 ko_edges["index"] = ko_edges["index"].astype(np.int64)
 go_edges["index"] = go_edges["index"].astype(np.int64)
 
