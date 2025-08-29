@@ -1,0 +1,54 @@
+2025-08-28 14:54:14,585 - INFO - Model Run Results - 2025-08-28 14:54:14
+  File: gnn_based_pred_cv.py (Fold: 1 / 10)
+  Accuracy: 0.7500
+ Best params: {'dropout': 0.2092806266528895, 'hidden_dim': 252.0, 'lr': 0.0001972099447067006, 'num_heads': 2, 'num_layers': 1.0, 'weight_decay': 0.0007524903332317939}
+--------------------------------------------------
+2025-08-28 15:53:43,917 - INFO - Model Run Results - 2025-08-28 15:53:43
+  File: gnn_based_pred_cv.py (Fold: 2 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.17651512254167312, 'hidden_dim': 232.0, 'lr': 0.0005851690984513841, 'num_heads': 1, 'num_layers': 3.0, 'weight_decay': 1.6049445497873104e-05}
+--------------------------------------------------
+2025-08-28 16:54:23,278 - INFO - Model Run Results - 2025-08-28 16:54:23
+  File: gnn_based_pred_cv.py (Fold: 3 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.3845124610588498, 'hidden_dim': 136.0, 'lr': 0.0007431291750644884, 'num_heads': 2, 'num_layers': 2.0, 'weight_decay': 0.0036045370375181436}
+--------------------------------------------------
+2025-08-28 18:01:50,812 - INFO - Model Run Results - 2025-08-28 18:01:50
+  File: gnn_based_pred_cv.py (Fold: 4 / 10)
+  Accuracy: 0.7500
+ Best params: {'dropout': 0.20013173672548734, 'hidden_dim': 144.0, 'lr': 0.0001739160852964993, 'num_heads': 4, 'num_layers': 2.0, 'weight_decay': 0.0002916342031573194}
+--------------------------------------------------
+2025-08-28 18:49:37,397 - INFO - Model Run Results - 2025-08-28 18:49:37
+  File: gnn_based_pred_cv.py (Fold: 5 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.7401845626885086, 'hidden_dim': 136.0, 'lr': 0.0001070044571751832, 'num_heads': 2, 'num_layers': 1.0, 'weight_decay': 7.784338761097078e-05}
+--------------------------------------------------
+2025-08-28 19:55:21,176 - INFO - Model Run Results - 2025-08-28 19:55:21
+  File: gnn_based_pred_cv.py (Fold: 6 / 10)
+  Accuracy: 0.5000
+ Best params: {'dropout': 0.6447094751344593, 'hidden_dim': 240.0, 'lr': 0.0009398331194968364, 'num_heads': 1, 'num_layers': 2.0, 'weight_decay': 5.974348682179591e-05}
+--------------------------------------------------
+2025-08-28 20:55:21,944 - INFO - Model Run Results - 2025-08-28 20:55:21
+  File: gnn_based_pred_cv.py (Fold: 7 / 10)
+  Accuracy: 0.9167
+ Best params: {'dropout': 0.2393524178340894, 'hidden_dim': 144.0, 'lr': 0.0015348907631289924, 'num_heads': 4, 'num_layers': 2.0, 'weight_decay': 0.07882268304415475}
+--------------------------------------------------
+2025-08-28 22:11:50,193 - INFO - Model Run Results - 2025-08-28 22:11:50
+  File: gnn_based_pred_cv.py (Fold: 8 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.6705800428135396, 'hidden_dim': 232.0, 'lr': 0.0005059346808709745, 'num_heads': 1, 'num_layers': 1.0, 'weight_decay': 0.04688802238094668}
+--------------------------------------------------
+2025-08-28 23:06:59,367 - INFO - Model Run Results - 2025-08-28 23:06:59
+  File: gnn_based_pred_cv.py (Fold: 9 / 10)
+  Accuracy: 0.6667
+ Best params: {'dropout': 0.24538310170414088, 'hidden_dim': 56.0, 'lr': 0.0007204635201598724, 'num_heads': 1, 'num_layers': 2.0, 'weight_decay': 4.036194012811462e-06}
+--------------------------------------------------
+2025-08-29 00:05:32,681 - INFO - Model Run Results - 2025-08-29 00:05:32
+  File: gnn_based_pred_cv.py (Fold: 10 / 10)
+  Accuracy: 0.7500
+ Best params: {'dropout': 0.0678901266561561, 'hidden_dim': 104.0, 'lr': 0.005022544426392334, 'num_heads': 4, 'num_layers': 1.0, 'weight_decay': 0.0014035295397656093}
+--------------------------------------------------
+2025-08-29 00:05:32,682 - INFO - Model Run Results - 2025-08-29 00:05:32
+  File: gnn_based_pred_cv.py
+  Accuracy: 0.6667 ± 0.1291
+--------------------------------------------------

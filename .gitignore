@@ -39,3 +39,5 @@ env/
 
 # Ignore the data directory
 data/
+
+push.sh
